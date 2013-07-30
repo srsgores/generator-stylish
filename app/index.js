@@ -1,0 +1,181 @@
+"use strict";
+var util = require("util");
+var path = require("path");
+var yeoman = require("yeoman-generator");
+
+var StylishGenerator = module.exports = function StylishGenerator(args, options, config)
+{
+	yeoman.generators.Base.apply(this, arguments);
+
+	this.on("end", function ()
+	{
+		this.installDependencies({ skipInstall: options["skip-install"] });
+	});
+
+	this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, "../package.json")));
+};
+
+util.inherits(StylishGenerator, yeoman.generators.Base);
+
+StylishGenerator.prototype.askFor = function askFor()
+{
+	var cb = this.async();
+
+	// have Yeoman greet the user.
+	console.log(this.yeoman);
+
+	var prompts = [
+		{
+			name: "name",
+			message: "What is the name of the new style?",
+			default: "Project Name"
+		},
+		{
+			name: "description",
+			message: "Give me a description on what your style is supposed to do",
+			default: "A sample description"
+		},
+
+		//author and header info
+		{
+			name: "authorName",
+			message: "Who is the creator of this style?",
+			default: "Sean Goresht"
+		},
+
+		{
+			name: "authorURL",
+			message: "What is the site where the author can be reached?",
+			default: "http://seangoresht.com"
+		},
+
+		{
+			name: "authorGitHub",
+			default: "srsgores",
+			message: "What is your gitHub account?"
+		},
+
+		{
+			name: "authorTwitter",
+			default: "SGoresht",
+			message: "What is your Twitter account?"
+		},
+
+		{
+			name: "authorCompanyName",
+			default: "Company Name",
+			message: "(optional) What is your company name?"
+		},
+
+		//SASS stuff
+		{
+			name: "includeIcomoon",
+			type: "confirm",
+			default: true,
+			message: "Would you like to include default Icomoon vector icon font?"
+		},
+
+		{
+			name: "includeAnimations",
+			type: "confirm",
+			default: true,
+			message: "Would you like to include animations for use with companimation?"
+		},
+		{
+			name: "includeBasicNav",
+			type: "confirm",
+			default: "false",
+			message: "Would you like to include nav styles?"
+		},
+		{
+			name: "includeReset",
+			type: "confirm",
+			default: "false",
+			message: "Would you like to include a custom reset?"
+		},
+		{
+			name: "includeTypeHelpers",
+			type: "confirm",
+			default: "false",
+			message: "Would you like to include a type stylesheet?"
+		},
+		{
+			name: "includeFormHelpers",
+			type: "confirm",
+			default: "false",
+			message: "Would you like to include a forms stylesheet?"
+		}
+	];
+
+	this.prompt(prompts, function (props)
+	{
+		//date helper
+		var date = new date();
+		this.currentDate = (date.getMonth() + date.getDate() + date.getFullYear());
+
+		this.name = props.name;
+		this.description = props.description;
+		this.authorName = props.authorName;
+		this.authorURL = props.authorURL;
+		this.authorGitHub = props.authorGitHub;
+		this.authorTwitter = props.authorTwitter;
+		this.authorCompanyName = props.authorCompanyName;
+		this.includeBasicNav = props.includeBasicNav;
+		this.includeReset = props.includeReset;
+		this.includeTypeHelpers = props.includeTypeHelpers;
+		this.includeFormHelpers = props.includeFormHelpers;
+
+		//scss stuff
+		this.includeIcomoon = props.includeIcomoon;
+		this.includeAnimations = props.includeAnimations;
+		cb();
+	}.bind(this));
+};
+
+StylishGenerator.prototype.app = function app()
+{
+	//sass files
+	this.mkdir("sass");
+	this.mkdir("sass/partials");
+	this.template("sass/_style.scss", "sass/style.scss");
+	if (this.includeFormHelpers) {
+		this.template("sass/partials/_forms.scss", "sass/partials/_forms.scss");
+	}
+	this.template("sass/partials/_grids.scss", "sass/partials/_grids.scss");
+	this.template("sass/partials/_helpers.scss", "sass/partials/_helpers.scss");
+	this.template("sass/partials/_media-queries.scss", "sass/partials/_media-queries.scss");
+	if (this.includeIcomoon) {
+		this.mkdir("sass/partials/icomoon");
+		this.template("sass/partials/icomoon/_icomoon.scss", "sass/partials/icomoon/_icomoon.scss");
+	}
+
+	if (this.includeReset) {
+		this.template("sass/partials/_reset.scss", "sass/partials/_reset.scss");
+	}
+
+	if (this.includeTypeHelpers) {
+		this.template("sass/partials/_type.scss", "sass/partials/_type.scss");
+	}
+
+	if (this.includeAnimations) {
+		this.template("sass/partials/_animations.scss", "sass/partials/_animations.scss");
+	}
+
+	if (this.includeBasicNav) {
+		this.template("sass/partials/_nav.scss", "sass/partials/_nav.scss");
+	}
+	this.template("sass/partials/_variables.scss", "sass/partials/_variables.scss");
+
+	//bower dependency
+	this.template("_bower.json", "bower.json");
+	this.template("_config.rb", "config.rb");
+	this.template("_package.json", "package.json");
+	this.template("_bower.json", "bower.json");
+	this.copy(".gitignore", ".gitignore");
+};
+
+StylishGenerator.prototype.projectfiles = function projectfiles()
+{
+	this.copy("editorconfig", ".editorconfig");
+	this.copy("jshintrc", ".jshintrc");
+};

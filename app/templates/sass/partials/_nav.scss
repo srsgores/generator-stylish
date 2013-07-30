@@ -1,0 +1,153 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @package: <%= name %> (Custom Stylish Theme) -- read more at http://userstyles.org/
+
+ @author: <%= authorName %>
+ @www: <%= authorURL %>
+ @github: <%= authorGitHub %>
+
+ @twitter: <%= authorTwitter %>
+
+ @copyright: COPYRIGHT <%= currentDate %> <%= authorCompanyName %>
+ =============================================================================
+ Filename: _type.scss
+ =============================================================================
+ This file is responsible for navigation elements on the <%= name %> custom stylish style.  Styles should be compiled using compass and sass.
+ --------------------------------------------------------------------------------------------------------------------- */
+
+@import "compass/css3";
+@import "variables.scss";
+@import "helpers";
+
+.nav, .nav ul {
+	@extend %margin-none;
+	@extend %padding-none;
+	@extend %no-list-style;
+}
+
+.nav {
+	background: darken($<%= _.slugify(name) %>TertiaryColour, 15);
+	border-bottom: $<%= _.slugify(name) %>BorderWidth $<%= _.slugify(name) %>BorderStyle darken($<%= _.slugify(name) %>BorderColour, 15%);
+	overflow: visible;
+	@extend %row-width;
+
+	@include background(linear-gradient($<%= _.slugify(name) %>TertiaryColour, darken($<%= _.slugify(name) %>TertiaryColour, 30)));
+	ul {
+		//normal menu styling here
+		a {
+			color: $<%= _.slugify(name) %>InverseTextColour;
+			@extend %medium;
+			border-right: 1px solid darken($<%= _.slugify(name) %>SecondaryColour, 25);
+			@extend %inline;
+			padding: $<%= _.slugify(name) %>PaddingSmall $<%= _.slugify(name) %>PaddingLarge;
+			text-decoration: none;
+			text-shadow: 0 1px $<%= _.slugify(name) %>PaddingSmall $<%= _.slugify(name) %>TextColour;
+
+			&:hover {
+				@include background(linear-gradient(lighten($<%= _.slugify(name) %>TertiaryColour, 30), $<%= _.slugify(name) %>TertiaryColour));
+			}
+		}
+		ul {
+			//nested menu 1
+			@extend %no-list-style;
+			@extend %opacity-0;
+			@extend %invisible;
+			@extend %absolute;
+			z-index: 9;
+			top: 100%;
+			@extend %normal-margin-left;
+			background: darken($<%= _.slugify(name) %>TertiaryColour, 20);
+			@include transition(opacity $<%= _.slugify(name) %>TransitionTime $<%= _.slugify(name) %>TransitionFunction);
+			@include box-shadow(0 0 $<%= _.slugify(name) %>PaddingSmall fade-out($<%= _.slugify(name) %>BodyBackground, 0.5));
+
+			ul {
+				//nested menu 2
+				left: 100%;
+				top: 0;
+				z-index: 10;
+				li {
+					&:first-child {
+						a {
+							&:after {
+								left: -0.4em;
+								top: $<%= _.slugify(name) %>Em * 0.8;
+								width: 0;
+								height: 0;
+								border-left: 0;
+								border-bottom: $<%= _.slugify(name) %>BorderRadius solid transparent;
+								border-top: $<%= _.slugify(name) %>BorderRadius solid transparent;
+								border-right: $<%= _.slugify(name) %>BorderRadiusLarge solid darken($<%= _.slugify(name) %>SecondaryColour, 40);
+							}
+
+							&:hover {
+								&:after {
+									border-right-color: lighten($<%= _.slugify(name) %>TertiaryColour, 40);
+									border-bottom-color: transparent;
+								}
+							}
+						}
+					}
+					&:last-child {
+						a {
+							border-right-color: lighten($<%= _.slugify(name) %>TertiaryColour, 40);
+							border-bottom-color: transparent;
+						}
+					}
+				}
+			}
+			li {
+				&:hover {
+					> ul {
+						@extend %opacity-1;
+						@extend %visible;
+						@extend %margin-none;
+					}
+				}
+
+				&:first-child {
+					a {
+						@extend %rounded-top;
+						&:hover {
+							&:after {
+								border-bottom-color: lighten($<%= _.slugify(name) %>TertiaryColour, 30);
+							}
+						}
+						&:after {
+							content: "";
+							@extend %absolute;
+							left: $<%= _.slugify(name) %>MarginLarge;
+							top: -0.4em;
+							width: 0;
+							height: 0;
+							border-left: ($<%= _.slugify(name) %>BorderWidth * $<%= _.slugify(name) %>Multiplier) $<%= _.slugify(name) %>BorderStyle transparent;
+							border-right: ($<%= _.slugify(name) %>BorderWidth * $<%= _.slugify(name) %>Multiplier) $<%= _.slugify(name) %>BorderStyle transparent;
+							border-bottom: ($<%= _.slugify(name) %>BorderWidth * $<%= _.slugify(name) %>MultiplierLarge) $<%= _.slugify(name) %>BorderStyle darken($<%= _.slugify(name) %>SecondaryColour, 15);
+						}
+					}
+				}
+			}
+		}
+		li {
+			@extend %inline;
+			@extend %relative;
+			&:hover {
+				a {
+					color: darken($<%= _.slugify(name) %>InverseTextColour, 10);
+				}
+				> ul {
+					@extend %block;
+					@extend %opacity-1;
+					@extend %visible;
+					@extend %margin-none;
+				}
+			}
+		}
+	}
+	@extend %clearfix;
+}
+
+//responsive button
+.responsive-grid {
+	@extend button;
+	@extend %margin-none;
+	@extend %show-phone;
+}

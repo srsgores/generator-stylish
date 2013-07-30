@@ -1,0 +1,42 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @package: <%= name %> (Custom Stylish Theme) -- read more at http://userstyles.org/
+
+ @author: <%= authorName %>
+ @www: <%= authorURL %>
+ @github: <%= authorGitHub %>
+
+ @twitter: <%= authorTwitter %>
+
+ @copyright: COPYRIGHT <%= currentDate %> <%= authorCompanyName %>
+ =============================================================================
+ Filename: _type.scss
+ =============================================================================
+ This file is responsible for typographic elements on the <%= name %> custom stylish style.  Styles should be compiled using compass and sass.
+ --------------------------------------------------------------------------------------------------------------------- */
+
+@import url($<%= _.slugify(name) %>FontURL);
+
+/* Type */
+#{headings(all)} {
+	font-weight: $<%= _.slugify(name) %>HeadingFontWeight;
+}
+
+@for $i from 1 through 6 {
+	h#{$i} {
+		font-size: (($<%= _.slugify(name) %>Em * $<%= _.slugify(name) %>MultiplierLarge) - (($i * (($<%= _.slugify(name) %>Em * $<%= _.slugify(name) %>MultiplierLarge) / 6 )))) + ($<%= _.slugify(name) %>Em * $<%= _.slugify(name) %>Multiplier);
+	}
+}
+
+a {
+	@extend %transition-all;
+	color: $<%= _.slugify(name) %>InverseTextColour;
+	&:visited {
+		color: darken($<%= _.slugify(name) %>TextColour, 30);
+	}
+	text-decoration: none;
+}
+
+ul, ol, dl {
+	padding-left: ($<%= _.slugify(name) %>PaddingLarge * $<%= _.slugify(name) %>Multiplier);
+	@extend %normal-margin-top-bottom;
+}

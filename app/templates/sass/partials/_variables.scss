@@ -1,0 +1,123 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @package: <%= name %> (Custom Stylish Theme) -- read more at http://userstyles.org/
+
+ @author: <%= authorName %>
+ @www: <%= authorURL %>
+ @github: <%= authorGitHub %>
+
+ @twitter: <%= authorTwitter %>
+
+ @copyright: COPYRIGHT <%= currentDate %> <%= authorCompanyName %>
+ =============================================================================
+ Filename: _variables.scss
+ =============================================================================
+ This file is responsible for all variables in the <%= name %> custom stylish style.  Styles should be compiled using compass and sass.
+ --------------------------------------------------------------------------------------------------------------------- */
+
+@import "compass/css3/pie";
+@import "compass/css3";
+
+/* =============================================================================
+CSS3 PIE
+========================================================================== */
+pie-enabled: false !default;
+pie-behavior: url("/css/PIE.htc");
+pie-base-class: pie-element;
+
+$<%= _.slugify(name) %>Multiplier: 1.3 !default;
+$<%= _.slugify(name) %>MultiplierLarge: $<%= _.slugify(name) %>Multiplier * 2.1 !default;
+$<%= _.slugify(name) %>MultiplierSmall: $<%= _.slugify(name) %>Multiplier / $<%= _.slugify(name) %>MultiplierLarge !default;
+
+$<%= _.slugify(name) %>MultiplierLargePercentage: $<%= _.slugify(name) %>MultiplierLarge * 10%;
+
+/* =============================================================================
+Sizes and Spacing
+========================================================================== */
+
+/* Padding */
+$<%= _.slugify(name) %>Padding: 1em !default;
+$<%= _.slugify(name) %>PaddingLarge: $<%= _.slugify(name) %>Padding * $<%= _.slugify(name) %>Multiplier;
+$<%= _.slugify(name) %>PaddingSmall: $<%= _.slugify(name) %>Padding / $<%= _.slugify(name) %>Multiplier;
+$<%= _.slugify(name) %>PaddingMini: $<%= _.slugify(name) %>Padding / $<%= _.slugify(name) %>MultiplierLarge;
+
+/* Margin */
+$<%= _.slugify(name) %>Margin: 1em !default;
+$<%= _.slugify(name) %>MarginSmall: $<%= _.slugify(name) %>Margin / $<%= _.slugify(name) %>Multiplier;
+$<%= _.slugify(name) %>MarginLarge: $<%= _.slugify(name) %>Margin * $<%= _.slugify(name) %>MultiplierLarge;
+$<%= _.slugify(name) %>MarginMini: $<%= _.slugify(name) %>MarginSmall / $<%= _.slugify(name) %>MultiplierLarge;
+
+/* =============================================================================
+Grid
+========================================================================== */
+$<%= _.slugify(name) %>Num-cols: 12 !default;
+$<%= _.slugify(name) %>RowWidth: 100% !default;
+$<%= _.slugify(name) %>Container-lateral-padding: $<%= _.slugify(name) %>Padding !default;
+$<%= _.slugify(name) %>Col-margin-right: 3.8% !default;
+$<%= _.slugify(name) %>Col-unit: (($<%= _.slugify(name) %>RowWidth + $<%= _.slugify(name) %>Col-margin-right) / $<%= _.slugify(name) %>Num-cols) !default;
+
+$<%= _.slugify(name) %>RowNotation: row !default;
+$<%= _.slugify(name) %>ColumnNotation: col !default;
+
+$<%= _.slugify(name) %>Container-width: $<%= _.slugify(name) %>RowWidth;
+$<%= _.slugify(name) %>Total-columns: $<%= _.slugify(name) %>Num-cols;
+$<%= _.slugify(name) %>Column-width: 4% !default;
+$<%= _.slugify(name) %>Gutter-width: 2% !default;
+$<%= _.slugify(name) %>Grid-padding: 0% !default; //rows should take up the whole screen
+$<%= _.slugify(name) %>From-direction: left;
+
+$<%= _.slugify(name) %>Container-style: fluid;
+
+//Turn off media-query fallback output for non-IE stylesheets.
+$<%= _.slugify(name) %>Breakpoint-ie-output: true;
+/* =============================================================================
+Type
+========================================================================== */
+$<%= _.slugify(name) %>FontURL: "http://fonts.googleapis.com/css?family=Open+Sans:400,300"; //google font url.  Imported at _type.scss
+$<%= _.slugify(name) %>Em: 1em !default;
+$<%= _.slugify(name) %>BaseFontSize: 100% !default;
+$<%= _.slugify(name) %>BaseFontFamily: "Open Sans", "sans-serif", "arial" !default;
+$<%= _.slugify(name) %>FontSizeSmall: ($<%= _.slugify(name) %>BaseFontSize / $<%= _.slugify(name) %>MultiplierSmall) !default;
+$<%= _.slugify(name) %>FontSizeMedium: ($<%= _.slugify(name) %>BaseFontSize * $<%= _.slugify(name) %>Multiplier) !default;
+$<%= _.slugify(name) %>FontSizeLarge: ($<%= _.slugify(name) %>BaseFontSize * $<%= _.slugify(name) %>MultiplierLarge) !default;
+$<%= _.slugify(name) %>FontSizeMini: ($<%= _.slugify(name) %>BaseFontSize / $<%= _.slugify(name) %>MultiplierLarge) !default;
+$<%= _.slugify(name) %>LineHeight: 1.4 !default;
+
+$<%= _.slugify(name) %>HeadingFontWeight: 300 !default;
+$<%= _.slugify(name) %>BaseFontWeight: 500 !default;
+
+$<%= _.slugify(name) %>BorderRadius: ($<%= _.slugify(name) %>Margin / $<%= _.slugify(name) %>MultiplierLarge) !default;
+$<%= _.slugify(name) %>BorderRadiusSmall: ($<%= _.slugify(name) %>BorderRadius / $<%= _.slugify(name) %>Multiplier) !default;
+$<%= _.slugify(name) %>BorderRadiusLarge: ($<%= _.slugify(name) %>BorderRadius * $<%= _.slugify(name) %>MultiplierLarge) !default;
+
+/* Transitions*/
+$<%= _.slugify(name) %>TransitionTime: 0.5s !default; //global transition time
+$<%= _.slugify(name) %>TransitionFunction: ease !default; //transition function for CSS3 transitions
+/* =============================================================================
+Colours
+========================================================================== */
+$<%= _.slugify(name) %>TextColour: #000 !default;
+$<%= _.slugify(name) %>InverseTextColour: invert($<%= _.slugify(name) %>TextColour) !default;
+$<%= _.slugify(name) %>PrimaryColour: #CCC !default; // colour of text and main colour overall
+$<%= _.slugify(name) %>SecondaryColour: #0f0f0f !default; // colour of any components, backgrounds, etc.
+$<%= _.slugify(name) %>TertiaryColour: #7c7c7c !default; //special colour to complement secondary colour
+//background colour.  Should be the opposite of primary colour for good results
+$<%= _.slugify(name) %>BodyBackground: $<%= _.slugify(name) %>InverseTextColour !default;
+
+/* Links */
+$<%= _.slugify(name) %>LinkColour: contrast-color($<%= _.slugify(name) %>TextColour, lighten($<%= _.slugify(name) %>TextColour, 30), darken($<%= _.slugify(name) %>TextColour, 30), 40%);
+
+/* =============================================================================
+Borders
+========================================================================== */
+$<%= _.slugify(name) %>BorderWidth: 1px !default;
+$<%= _.slugify(name) %>BorderStyle: solid !default;
+$<%= _.slugify(name) %>BorderColour: fade-out(lighten($<%= _.slugify(name) %>TextColour, 80%), 0.5) !default;
+$<%= _.slugify(name) %>Border: $<%= _.slugify(name) %>BorderWidth $<%= _.slugify(name) %>BorderStyle $<%= _.slugify(name) %>BorderColour;
+
+/* =============================================================================
+Media query variables
+========================================================================== */
+$<%= _.slugify(name) %>BreakpointMain: (screen) (max-width 767px);
+$<%= _.slugify(name) %>QueryIphone3: (only screen) (min-device-width 320px) (max-device-width 480px) (1 -webkit-device-pixel-ratio);
+$<%= _.slugify(name) %>QueryIphone3Portrait: (only screen) (min-device-width 320px) (max-device-width 480px) (1 -webkit-device-pixel-ratio) (orientation portrait);
+$<%= _.slugify(name) %>QueryIphone3Landscape: (only screen) (min-device-width 320px) (max-device-width 480px) (1 -webkit-device-pixel-ratio) (orientation landscape);
