@@ -18,6 +18,6 @@
 
 @for $i from 1 through 10 {
 	%delayed-#{$i} {
-		@include animation-delay(($i * $<%= _.slugify(name) %>TransitionTime));
+		@include animation-delay(($i * $<%= _.camelize(name) %>TransitionTime));
 	}
 }

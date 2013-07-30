@@ -21,7 +21,7 @@
 
 @function col-name($n) {
 /* Use naming consistent with original 1140x Grid V2 */
-	$col-name: $<%= _.slugify(name) %>ColumnNotation; //default
+	$col-name: $<%= _.camelize(name) %>ColumnNotation; //default
 
 	@if $n == 1  {
 		$col-name: one;
@@ -71,11 +71,11 @@
 	@if $n == 16 {
 		$col-name: sixteen;
 	}
-	@return $col-name#{$<%= _.slugify(name) %>ColumnNotation};
+	@return $col-name#{$<%= _.camelize(name) %>ColumnNotation};
 }
 
-@function relativeColName($n, $<%= _.slugify(name) %>Num-cols) {
-	$colClassFloat: $<%= _.slugify(name) %>Num-cols / $n;
+@function relativeColName($n, $<%= _.camelize(name) %>Num-cols) {
+	$colClassFloat: $<%= _.camelize(name) %>Num-cols / $n;
 	@return round($colClassFloat);
 }
 
@@ -83,24 +83,24 @@
 	@extend %transition-all;
 }
 
-@for $i from 1 through ($<%= _.slugify(name) %>Num-cols) {
+@for $i from 1 through ($<%= _.camelize(name) %>Num-cols) {
 	%#{col-name($i)} {
 		@extend %col;
 	}
 
-	.#{$<%= _.slugify(name) %>RowNotation} {
+	.#{$<%= _.camelize(name) %>RowNotation} {
 		%#{col-name($i)}:last-child {
 			@extend %last !optional;
-			@include span-columns($i omega, $<%= _.slugify(name) %>Num-cols);
+			@include span-columns($i omega, $<%= _.camelize(name) %>Num-cols);
 		}
 	}
 
 	%#{col-name($i)} {
-		@if $i == $<%= _.slugify(name) %>Num-cols {
-			@include span-columns($i omega, $<%= _.slugify(name) %>Num-cols);
+		@if $i == $<%= _.camelize(name) %>Num-cols {
+			@include span-columns($i omega, $<%= _.camelize(name) %>Num-cols);
 		}
 		@else {
-			@include span-columns($i, $<%= _.slugify(name) %>Num-cols);
+			@include span-columns($i, $<%= _.camelize(name) %>Num-cols);
 		}
 	}
 }
@@ -108,8 +108,8 @@
 .container {
 	@include container;
 	@extend %border-box;
-	.#{$<%= _.slugify(name) %>RowNotation} {
-		width: $<%= _.slugify(name) %>Container-width;
+	.#{$<%= _.camelize(name) %>RowNotation} {
+		width: $<%= _.camelize(name) %>Container-width;
 		margin: 0 auto;
 		@extend %overflow-hidden;
 		@extend %padding-none;
@@ -121,7 +121,7 @@
 	}
 }
 
-@for $i from 1 through ($<%= _.slugify(name) %>Num-cols) {
+@for $i from 1 through ($<%= _.camelize(name) %>Num-cols) {
 
 }
 

@@ -117,9 +117,13 @@ StylishGenerator.prototype.askFor = function askFor()
 	this.prompt(prompts, function (props)
 	{
 		//date helper
-		var date = new date();
-		this.currentDate = (date.getMonth() + date.getDate() + date.getFullYear());
+		var today = new Date();
 
+		var prefix = today.getUTCMonth() + 1;
+		prefix += "-" + today.getDate();
+		prefix += "-" + today.getFullYear();
+
+		this.currentDate = prefix;
 		this.name = props.name;
 		this.description = props.description;
 		this.authorName = props.authorName;
@@ -180,10 +184,8 @@ StylishGenerator.prototype.app = function app()
 	this.template("sass/partials/_variables.scss", "sass/partials/_variables.scss");
 
 	//bower dependency
-	this.template("_bower.json", "bower.json");
 	this.template("_config.rb", "config.rb");
 	this.template("_package.json", "package.json");
-	this.template("_bower.json", "bower.json");
 	this.copy(".gitignore", ".gitignore");
 };
 

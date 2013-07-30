@@ -37,9 +37,9 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it"s slower:
 [class*="icon-"] {
 */
-$<%= _.slugify(name) %>Icons: ".icon-glass, .icon-music, .icon-search, .icon-envelope, .icon-heart, .icon-star, .icon-star-empty, .icon-user, .icon-film, .icon-th-large, .icon-th, .icon-th-list, .icon-remove, .icon-zoom-in, .icon-zoom-out, .icon-off, .icon-signal, .icon-cog, .icon-trash, .icon-home, .icon-file, .icon-time, .icon-road, .icon-download-alt, .icon-download, .icon-upload, .icon-repeat, .icon-refresh, .icon-list-alt, .icon-lock, .icon-flag, .icon-headphones, .icon-volume-off, .icon-volume-down, .icon-volume-up, .icon-qrcode, .icon-tag, .icon-tags, .icon-book, .icon-bookmark, .icon-print, .icon-camera, .icon-font, .icon-bold, .icon-italic, .icon-text-height, .icon-text-width, .icon-align-left, .icon-align-center, .icon-align-right, .icon-align-justify, .icon-list, .icon-indent-left, .icon-indent-right, .icon-picture, .icon-pencil, .icon-map-marker, .icon-adjust, .icon-edit, .icon-share, .icon-move, .icon-step-backward, .icon-fast-backward, .icon-backward, .icon-play, .icon-pause, .icon-stop, .icon-forward, .icon-fast-forward, .icon-step-forward, .icon-eject, .icon-chevron-left, .icon-chevron-right, .icon-plus-sign, .icon-minus-sign, .icon-remove-sign, .icon-question-sign, .icon-info-sign, .icon-screenshot, .icon-arrow-left, .icon-arrow-right, .icon-arrow-up, .icon-arrow-down, .icon-share-alt, .icon-resize-full, .icon-resize-small, .icon-plus, .icon-minus, .icon-gift, .icon-leaf, .icon-fire, .icon-eye-open, .icon-eye-close, .icon-warning-sign, .icon-plane, .icon-random, .icon-comment, .icon-magnet, .icon-chevron-up, .icon-chevron-down, .icon-retweet, .icon-folder-close, .icon-resize-vertical, .icon-resize-horizontal, .icon-twitter-sign, .icon-facebook-sign, .icon-key, .icon-cogs, .icon-comments, .icon-thumbs-up, .icon-thumbs-down, .icon-heart-empty, .icon-signout, .icon-linkedin-sign, .icon-pushpin, .icon-external-link, .icon-signin, .icon-trophy, .icon-github-sign, .icon-upload-alt, .icon-lemon, .icon-phone, .icon-bookmark-empty, .icon-phone-sign, .icon-twitter, .icon-facebook, .icon-github, .icon-unlock, .icon-credit, .icon-rss, .icon-hdd, .icon-bullhorn, .icon-bell, .icon-certificate, .icon-hand-right, .icon-hand-left, .icon-hand-up, .icon-hand-down, .icon-circle-arrow-left, .icon-circle-arrow-right, .icon-circle-arrow-up, .icon-circle-arrow-down, .icon-globe, .icon-wrench, .icon-tasks, .icon-filter, .icon-briefcase, .icon-fullscreen, .icon-group, .icon-link, .icon-cloud, .icon-beaker, .icon-cut, .icon-copy, .icon-paper-clip, .icon-save, .icon-sign-blank, .icon-reorder, .icon-list-ul, .icon-list-ol, .icon-strikethrough, .icon-underline, .icon-table, .icon-magic, .icon-truck, .icon-pinterest, .icon-google-plus-sign, .icon-google-plus, .icon-money, .icon-caret-down, .icon-caret-up, .icon-caret-left, .icon-caret-right, .icon-columns, .icon-sort, .icon-sort-down, .icon-sort-up, .icon-envelope-alt, .icon-linkedin, .icon-undo, .icon-legal, .icon-dashboard, .icon-comment-alt, .icon-comments-alt, .icon-bolt, .icon-sitemap, .icon-umbrella, .icon-paste, .icon-stethoscope, .icon-suitcase, .icon-bell-alt, .icon-coffee, .icon-food, .icon-file-alt, .icon-building, .icon-hospital, .icon-ambulance, .icon-medkit, .icon-angle-up, .icon-angle-down, .icon-desktop, .icon-laptop, .icon-tablet, .icon-mobile, .icon-circle-blank, .icon-quote-left, .icon-quote-right, .icon-paperclip, .icon-reply-all, .icon-forward-2, .icon-user-2, .icon-users, .icon-heart-2, .icon-heart-3, .icon-thumbs-up-2, .icon-thumbs-down-2, .icon-publish, .icon-chat, .icon-comment-2, .icon-skypeonline, .icon-error, .icon-drawer, .icon-drawer-2, .icon-drawer-3, .icon-volume-high, .icon-images, .icon-image, .icon-pencil-2, .icon-cart, .icon-coin, .icon-credit-2, .icon-phone-2, .icon-menu, .icon-earth, .icon-briefcase-2, .icon-airplane, .icon-truck-2, .icon-road-2, .icon-happy, .icon-sad, .icon-checkmark, .icon-checkmark-circle, .icon-file-pdf, .icon-file-openoffice, .icon-file-word, .icon-file-excel, .icon-file-zip, .icon-file-css, .icon-checkout, .icon-file-powerpoint, .icon-twitter-2, .icon-google-plus-2, .icon-facebook-2, .icon-flickr, .icon-flickr-2, .icon-vimeo, .icon-soundcloud, .icon-skype, .icon-apple, .icon-windows8, .icon-chrome, .icon-firefox, .icon-IE, .icon-opera, .icon-barcode, .icon-locked, .icon-redo, .icon-reply, .icon-file-add, .icon-folder-open, .icon-cord, .icon-cube, .icon-puzzle, .icon-tools, .icon-equalizer, .icon-brush, .icon-checkbox-partial, .icon-calendar, .icon-calendar-2, .icon-lifebuoy, .icon-exclamation-sign, .icon-box-add, .icon-box-remove, .icon-facetime-video, .icon-play-2, .icon-play-3, .icon-database, .icon-aid, .icon-vcard, .icon-compass, .icon-map, .icon-lightbulb, .icon-stats, .icon-pie, .icon-cart-2, .icon-share-2, .icon-html5, .icon-github-2, .icon-youtube, .icon-file-xml, .icon-alert";
+$<%= _.camelize(name) %>Icons: ".icon-glass, .icon-music, .icon-search, .icon-envelope, .icon-heart, .icon-star, .icon-star-empty, .icon-user, .icon-film, .icon-th-large, .icon-th, .icon-th-list, .icon-remove, .icon-zoom-in, .icon-zoom-out, .icon-off, .icon-signal, .icon-cog, .icon-trash, .icon-home, .icon-file, .icon-time, .icon-road, .icon-download-alt, .icon-download, .icon-upload, .icon-repeat, .icon-refresh, .icon-list-alt, .icon-lock, .icon-flag, .icon-headphones, .icon-volume-off, .icon-volume-down, .icon-volume-up, .icon-qrcode, .icon-tag, .icon-tags, .icon-book, .icon-bookmark, .icon-print, .icon-camera, .icon-font, .icon-bold, .icon-italic, .icon-text-height, .icon-text-width, .icon-align-left, .icon-align-center, .icon-align-right, .icon-align-justify, .icon-list, .icon-indent-left, .icon-indent-right, .icon-picture, .icon-pencil, .icon-map-marker, .icon-adjust, .icon-edit, .icon-share, .icon-move, .icon-step-backward, .icon-fast-backward, .icon-backward, .icon-play, .icon-pause, .icon-stop, .icon-forward, .icon-fast-forward, .icon-step-forward, .icon-eject, .icon-chevron-left, .icon-chevron-right, .icon-plus-sign, .icon-minus-sign, .icon-remove-sign, .icon-question-sign, .icon-info-sign, .icon-screenshot, .icon-arrow-left, .icon-arrow-right, .icon-arrow-up, .icon-arrow-down, .icon-share-alt, .icon-resize-full, .icon-resize-small, .icon-plus, .icon-minus, .icon-gift, .icon-leaf, .icon-fire, .icon-eye-open, .icon-eye-close, .icon-warning-sign, .icon-plane, .icon-random, .icon-comment, .icon-magnet, .icon-chevron-up, .icon-chevron-down, .icon-retweet, .icon-folder-close, .icon-resize-vertical, .icon-resize-horizontal, .icon-twitter-sign, .icon-facebook-sign, .icon-key, .icon-cogs, .icon-comments, .icon-thumbs-up, .icon-thumbs-down, .icon-heart-empty, .icon-signout, .icon-linkedin-sign, .icon-pushpin, .icon-external-link, .icon-signin, .icon-trophy, .icon-github-sign, .icon-upload-alt, .icon-lemon, .icon-phone, .icon-bookmark-empty, .icon-phone-sign, .icon-twitter, .icon-facebook, .icon-github, .icon-unlock, .icon-credit, .icon-rss, .icon-hdd, .icon-bullhorn, .icon-bell, .icon-certificate, .icon-hand-right, .icon-hand-left, .icon-hand-up, .icon-hand-down, .icon-circle-arrow-left, .icon-circle-arrow-right, .icon-circle-arrow-up, .icon-circle-arrow-down, .icon-globe, .icon-wrench, .icon-tasks, .icon-filter, .icon-briefcase, .icon-fullscreen, .icon-group, .icon-link, .icon-cloud, .icon-beaker, .icon-cut, .icon-copy, .icon-paper-clip, .icon-save, .icon-sign-blank, .icon-reorder, .icon-list-ul, .icon-list-ol, .icon-strikethrough, .icon-underline, .icon-table, .icon-magic, .icon-truck, .icon-pinterest, .icon-google-plus-sign, .icon-google-plus, .icon-money, .icon-caret-down, .icon-caret-up, .icon-caret-left, .icon-caret-right, .icon-columns, .icon-sort, .icon-sort-down, .icon-sort-up, .icon-envelope-alt, .icon-linkedin, .icon-undo, .icon-legal, .icon-dashboard, .icon-comment-alt, .icon-comments-alt, .icon-bolt, .icon-sitemap, .icon-umbrella, .icon-paste, .icon-stethoscope, .icon-suitcase, .icon-bell-alt, .icon-coffee, .icon-food, .icon-file-alt, .icon-building, .icon-hospital, .icon-ambulance, .icon-medkit, .icon-angle-up, .icon-angle-down, .icon-desktop, .icon-laptop, .icon-tablet, .icon-mobile, .icon-circle-blank, .icon-quote-left, .icon-quote-right, .icon-paperclip, .icon-reply-all, .icon-forward-2, .icon-user-2, .icon-users, .icon-heart-2, .icon-heart-3, .icon-thumbs-up-2, .icon-thumbs-down-2, .icon-publish, .icon-chat, .icon-comment-2, .icon-skypeonline, .icon-error, .icon-drawer, .icon-drawer-2, .icon-drawer-3, .icon-volume-high, .icon-images, .icon-image, .icon-pencil-2, .icon-cart, .icon-coin, .icon-credit-2, .icon-phone-2, .icon-menu, .icon-earth, .icon-briefcase-2, .icon-airplane, .icon-truck-2, .icon-road-2, .icon-happy, .icon-sad, .icon-checkmark, .icon-checkmark-circle, .icon-file-pdf, .icon-file-openoffice, .icon-file-word, .icon-file-excel, .icon-file-zip, .icon-file-css, .icon-checkout, .icon-file-powerpoint, .icon-twitter-2, .icon-google-plus-2, .icon-facebook-2, .icon-flickr, .icon-flickr-2, .icon-vimeo, .icon-soundcloud, .icon-skype, .icon-apple, .icon-windows8, .icon-chrome, .icon-firefox, .icon-IE, .icon-opera, .icon-barcode, .icon-locked, .icon-redo, .icon-reply, .icon-file-add, .icon-folder-open, .icon-cord, .icon-cube, .icon-puzzle, .icon-tools, .icon-equalizer, .icon-brush, .icon-checkbox-partial, .icon-calendar, .icon-calendar-2, .icon-lifebuoy, .icon-exclamation-sign, .icon-box-add, .icon-box-remove, .icon-facetime-video, .icon-play-2, .icon-play-3, .icon-database, .icon-aid, .icon-vcard, .icon-compass, .icon-map, .icon-lightbulb, .icon-stats, .icon-pie, .icon-cart-2, .icon-share-2, .icon-html5, .icon-github-2, .icon-youtube, .icon-file-xml, .icon-alert";
 
-#{$<%= _.slugify(name) %>Icons} {
+#{$<%= _.camelize(name) %>Icons} {
 	font-family: "icomoon";
 	speak: none;
 	font-style: normal;
@@ -50,600 +50,600 @@ $<%= _.slugify(name) %>Icons: ".icon-glass, .icon-music, .icon-search, .icon-env
 	-webkit-font-smoothing: antialiased;
 }
 
-$<%= _.slugify(name) %>Icon-glass: "\f000";
+$<%= _.camelize(name) %>Icon-glass: "\f000";
 
-$<%= _.slugify(name) %>Icon-music: "\f001";
+$<%= _.camelize(name) %>Icon-music: "\f001";
 
-$<%= _.slugify(name) %>Icon-search: "\f002";
+$<%= _.camelize(name) %>Icon-search: "\f002";
 
-$<%= _.slugify(name) %>Icon-envelope: "\f003";
+$<%= _.camelize(name) %>Icon-envelope: "\f003";
 
-$<%= _.slugify(name) %>Icon-heart: "\f004";
+$<%= _.camelize(name) %>Icon-heart: "\f004";
 
-$<%= _.slugify(name) %>Icon-star: "\f005";
+$<%= _.camelize(name) %>Icon-star: "\f005";
 
-$<%= _.slugify(name) %>Icon-star-empty: "\f006";
+$<%= _.camelize(name) %>Icon-star-empty: "\f006";
 
-$<%= _.slugify(name) %>Icon-user: "\f007";
+$<%= _.camelize(name) %>Icon-user: "\f007";
 
-$<%= _.slugify(name) %>Icon-film: "\f008";
+$<%= _.camelize(name) %>Icon-film: "\f008";
 
-$<%= _.slugify(name) %>Icon-th-large: "\f009";
+$<%= _.camelize(name) %>Icon-th-large: "\f009";
 
-$<%= _.slugify(name) %>Icon-th: "\f00a";
+$<%= _.camelize(name) %>Icon-th: "\f00a";
 
-$<%= _.slugify(name) %>Icon-th-list: "\f00b";
+$<%= _.camelize(name) %>Icon-th-list: "\f00b";
 
-$<%= _.slugify(name) %>Icon-remove: "\f00d";
+$<%= _.camelize(name) %>Icon-remove: "\f00d";
 
-$<%= _.slugify(name) %>Icon-zoom-in: "\f00e";
+$<%= _.camelize(name) %>Icon-zoom-in: "\f00e";
 
-$<%= _.slugify(name) %>Icon-zoom-out: "\f010";
+$<%= _.camelize(name) %>Icon-zoom-out: "\f010";
 
-$<%= _.slugify(name) %>Icon-off: "\f011";
+$<%= _.camelize(name) %>Icon-off: "\f011";
 
-$<%= _.slugify(name) %>Icon-signal: "\f012";
+$<%= _.camelize(name) %>Icon-signal: "\f012";
 
-$<%= _.slugify(name) %>Icon-cog: "\f013";
+$<%= _.camelize(name) %>Icon-cog: "\f013";
 
-$<%= _.slugify(name) %>Icon-trash: "\f014";
+$<%= _.camelize(name) %>Icon-trash: "\f014";
 
-$<%= _.slugify(name) %>Icon-home: "\f015";
+$<%= _.camelize(name) %>Icon-home: "\f015";
 
-$<%= _.slugify(name) %>Icon-file: "\f016";
+$<%= _.camelize(name) %>Icon-file: "\f016";
 
-$<%= _.slugify(name) %>Icon-time: "\f017";
+$<%= _.camelize(name) %>Icon-time: "\f017";
 
-$<%= _.slugify(name) %>Icon-road: "\f018";
+$<%= _.camelize(name) %>Icon-road: "\f018";
 
-$<%= _.slugify(name) %>Icon-download-alt: "\f019";
+$<%= _.camelize(name) %>Icon-download-alt: "\f019";
 
-$<%= _.slugify(name) %>Icon-download: "\f01a";
+$<%= _.camelize(name) %>Icon-download: "\f01a";
 
-$<%= _.slugify(name) %>Icon-upload: "\f01b";
+$<%= _.camelize(name) %>Icon-upload: "\f01b";
 
-$<%= _.slugify(name) %>Icon-repeat: "\f01e";
+$<%= _.camelize(name) %>Icon-repeat: "\f01e";
 
-$<%= _.slugify(name) %>Icon-refresh: "\f021";
+$<%= _.camelize(name) %>Icon-refresh: "\f021";
 
-$<%= _.slugify(name) %>Icon-list-alt: "\f022";
+$<%= _.camelize(name) %>Icon-list-alt: "\f022";
 
-$<%= _.slugify(name) %>Icon-lock: "\f023";
+$<%= _.camelize(name) %>Icon-lock: "\f023";
 
-$<%= _.slugify(name) %>Icon-flag: "\f024";
+$<%= _.camelize(name) %>Icon-flag: "\f024";
 
-$<%= _.slugify(name) %>Icon-headphones: "\f025";
+$<%= _.camelize(name) %>Icon-headphones: "\f025";
 
-$<%= _.slugify(name) %>Icon-volume-off: "\f026";
+$<%= _.camelize(name) %>Icon-volume-off: "\f026";
 
-$<%= _.slugify(name) %>Icon-volume-down: "\f027";
+$<%= _.camelize(name) %>Icon-volume-down: "\f027";
 
-$<%= _.slugify(name) %>Icon-volume-up: "\f028";
+$<%= _.camelize(name) %>Icon-volume-up: "\f028";
 
-$<%= _.slugify(name) %>Icon-qrcode: "\f029";
+$<%= _.camelize(name) %>Icon-qrcode: "\f029";
 
-$<%= _.slugify(name) %>Icon-tag: "\f02b";
+$<%= _.camelize(name) %>Icon-tag: "\f02b";
 
-$<%= _.slugify(name) %>Icon-tags: "\f02c";
+$<%= _.camelize(name) %>Icon-tags: "\f02c";
 
-$<%= _.slugify(name) %>Icon-book: "\f02d";
+$<%= _.camelize(name) %>Icon-book: "\f02d";
 
-$<%= _.slugify(name) %>Icon-bookmark: "\f02e";
+$<%= _.camelize(name) %>Icon-bookmark: "\f02e";
 
-$<%= _.slugify(name) %>Icon-print: "\f02f";
+$<%= _.camelize(name) %>Icon-print: "\f02f";
 
-$<%= _.slugify(name) %>Icon-camera: "\f030";
+$<%= _.camelize(name) %>Icon-camera: "\f030";
 
-$<%= _.slugify(name) %>Icon-font: "\f031";
+$<%= _.camelize(name) %>Icon-font: "\f031";
 
-$<%= _.slugify(name) %>Icon-bold: "\f032";
+$<%= _.camelize(name) %>Icon-bold: "\f032";
 
-$<%= _.slugify(name) %>Icon-italic: "\f033";
+$<%= _.camelize(name) %>Icon-italic: "\f033";
 
-$<%= _.slugify(name) %>Icon-text-height: "\f034";
+$<%= _.camelize(name) %>Icon-text-height: "\f034";
 
-$<%= _.slugify(name) %>Icon-text-width: "\f035";
+$<%= _.camelize(name) %>Icon-text-width: "\f035";
 
-$<%= _.slugify(name) %>Icon-align-left: "\f036";
+$<%= _.camelize(name) %>Icon-align-left: "\f036";
 
-$<%= _.slugify(name) %>Icon-align-center: "\f037";
+$<%= _.camelize(name) %>Icon-align-center: "\f037";
 
-$<%= _.slugify(name) %>Icon-align-right: "\f038";
+$<%= _.camelize(name) %>Icon-align-right: "\f038";
 
-$<%= _.slugify(name) %>Icon-align-justify: "\f039";
+$<%= _.camelize(name) %>Icon-align-justify: "\f039";
 
-$<%= _.slugify(name) %>Icon-list: "\f03a";
+$<%= _.camelize(name) %>Icon-list: "\f03a";
 
-$<%= _.slugify(name) %>Icon-indent-left: "\f03b";
+$<%= _.camelize(name) %>Icon-indent-left: "\f03b";
 
-$<%= _.slugify(name) %>Icon-indent-right: "\f03c";
+$<%= _.camelize(name) %>Icon-indent-right: "\f03c";
 
-$<%= _.slugify(name) %>Icon-picture: "\f03e";
+$<%= _.camelize(name) %>Icon-picture: "\f03e";
 
-$<%= _.slugify(name) %>Icon-pencil: "\f040";
+$<%= _.camelize(name) %>Icon-pencil: "\f040";
 
-$<%= _.slugify(name) %>Icon-map-marker: "\f041";
+$<%= _.camelize(name) %>Icon-map-marker: "\f041";
 
-$<%= _.slugify(name) %>Icon-adjust: "\f042";
+$<%= _.camelize(name) %>Icon-adjust: "\f042";
 
-$<%= _.slugify(name) %>Icon-edit: "\f044";
+$<%= _.camelize(name) %>Icon-edit: "\f044";
 
-$<%= _.slugify(name) %>Icon-share: "\f045";
+$<%= _.camelize(name) %>Icon-share: "\f045";
 
-$<%= _.slugify(name) %>Icon-move: "\f047";
+$<%= _.camelize(name) %>Icon-move: "\f047";
 
-$<%= _.slugify(name) %>Icon-step-backward: "\f048";
+$<%= _.camelize(name) %>Icon-step-backward: "\f048";
 
-$<%= _.slugify(name) %>Icon-fast-backward: "\f049";
+$<%= _.camelize(name) %>Icon-fast-backward: "\f049";
 
-$<%= _.slugify(name) %>Icon-backward: "\f04a";
+$<%= _.camelize(name) %>Icon-backward: "\f04a";
 
-$<%= _.slugify(name) %>Icon-play: "\f04b";
+$<%= _.camelize(name) %>Icon-play: "\f04b";
 
-$<%= _.slugify(name) %>Icon-pause: "\f04c";
+$<%= _.camelize(name) %>Icon-pause: "\f04c";
 
-$<%= _.slugify(name) %>Icon-stop: "\f04d";
+$<%= _.camelize(name) %>Icon-stop: "\f04d";
 
-$<%= _.slugify(name) %>Icon-forward: "\f04e";
+$<%= _.camelize(name) %>Icon-forward: "\f04e";
 
-$<%= _.slugify(name) %>Icon-fast-forward: "\f050";
+$<%= _.camelize(name) %>Icon-fast-forward: "\f050";
 
-$<%= _.slugify(name) %>Icon-step-forward: "\f051";
+$<%= _.camelize(name) %>Icon-step-forward: "\f051";
 
-$<%= _.slugify(name) %>Icon-eject: "\f052";
+$<%= _.camelize(name) %>Icon-eject: "\f052";
 
-$<%= _.slugify(name) %>Icon-chevron-left: "\f053";
+$<%= _.camelize(name) %>Icon-chevron-left: "\f053";
 
-$<%= _.slugify(name) %>Icon-chevron-right: "\f054";
+$<%= _.camelize(name) %>Icon-chevron-right: "\f054";
 
-$<%= _.slugify(name) %>Icon-plus-sign: "\f055";
+$<%= _.camelize(name) %>Icon-plus-sign: "\f055";
 
-$<%= _.slugify(name) %>Icon-minus-sign: "\f056";
+$<%= _.camelize(name) %>Icon-minus-sign: "\f056";
 
-$<%= _.slugify(name) %>Icon-remove-sign: "\f057";
+$<%= _.camelize(name) %>Icon-remove-sign: "\f057";
 
-$<%= _.slugify(name) %>Icon-question-sign: "\f059";
+$<%= _.camelize(name) %>Icon-question-sign: "\f059";
 
-$<%= _.slugify(name) %>Icon-info-sign: "\f05a";
+$<%= _.camelize(name) %>Icon-info-sign: "\f05a";
 
-$<%= _.slugify(name) %>Icon-screenshot: "\f05b";
+$<%= _.camelize(name) %>Icon-screenshot: "\f05b";
 
-$<%= _.slugify(name) %>Icon-arrow-left: "\f060";
+$<%= _.camelize(name) %>Icon-arrow-left: "\f060";
 
-$<%= _.slugify(name) %>Icon-arrow-right: "\f061";
+$<%= _.camelize(name) %>Icon-arrow-right: "\f061";
 
-$<%= _.slugify(name) %>Icon-arrow-up: "\f062";
+$<%= _.camelize(name) %>Icon-arrow-up: "\f062";
 
-$<%= _.slugify(name) %>Icon-arrow-down: "\f063";
+$<%= _.camelize(name) %>Icon-arrow-down: "\f063";
 
-$<%= _.slugify(name) %>Icon-share-alt: "\f064";
+$<%= _.camelize(name) %>Icon-share-alt: "\f064";
 
-$<%= _.slugify(name) %>Icon-resize-full: "\f065";
+$<%= _.camelize(name) %>Icon-resize-full: "\f065";
 
-$<%= _.slugify(name) %>Icon-resize-small: "\f066";
+$<%= _.camelize(name) %>Icon-resize-small: "\f066";
 
-$<%= _.slugify(name) %>Icon-plus: "\f067";
+$<%= _.camelize(name) %>Icon-plus: "\f067";
 
-$<%= _.slugify(name) %>Icon-minus: "\f068";
+$<%= _.camelize(name) %>Icon-minus: "\f068";
 
-$<%= _.slugify(name) %>Icon-gift: "\f06b";
+$<%= _.camelize(name) %>Icon-gift: "\f06b";
 
-$<%= _.slugify(name) %>Icon-leaf: "\f06c";
+$<%= _.camelize(name) %>Icon-leaf: "\f06c";
 
-$<%= _.slugify(name) %>Icon-fire: "\f06d";
+$<%= _.camelize(name) %>Icon-fire: "\f06d";
 
-$<%= _.slugify(name) %>Icon-eye-open: "\f06e";
+$<%= _.camelize(name) %>Icon-eye-open: "\f06e";
 
-$<%= _.slugify(name) %>Icon-eye-close: "\f070";
+$<%= _.camelize(name) %>Icon-eye-close: "\f070";
 
-$<%= _.slugify(name) %>Icon-warning-sign: "\f071";
+$<%= _.camelize(name) %>Icon-warning-sign: "\f071";
 
-$<%= _.slugify(name) %>Icon-plane: "\f072";
+$<%= _.camelize(name) %>Icon-plane: "\f072";
 
-$<%= _.slugify(name) %>Icon-random: "\f074";
+$<%= _.camelize(name) %>Icon-random: "\f074";
 
-$<%= _.slugify(name) %>Icon-comment: "\f075";
+$<%= _.camelize(name) %>Icon-comment: "\f075";
 
-$<%= _.slugify(name) %>Icon-magnet: "\f076";
+$<%= _.camelize(name) %>Icon-magnet: "\f076";
 
-$<%= _.slugify(name) %>Icon-chevron-up: "\f077";
+$<%= _.camelize(name) %>Icon-chevron-up: "\f077";
 
-$<%= _.slugify(name) %>Icon-chevron-down: "\f078";
+$<%= _.camelize(name) %>Icon-chevron-down: "\f078";
 
-$<%= _.slugify(name) %>Icon-retweet: "\f079";
+$<%= _.camelize(name) %>Icon-retweet: "\f079";
 
-$<%= _.slugify(name) %>Icon-folder-close: "\f07b";
+$<%= _.camelize(name) %>Icon-folder-close: "\f07b";
 
-$<%= _.slugify(name) %>Icon-resize-vertical: "\f07d";
+$<%= _.camelize(name) %>Icon-resize-vertical: "\f07d";
 
-$<%= _.slugify(name) %>Icon-resize-horizontal: "\f07e";
+$<%= _.camelize(name) %>Icon-resize-horizontal: "\f07e";
 
-$<%= _.slugify(name) %>Icon-twitter-sign: "\f081";
+$<%= _.camelize(name) %>Icon-twitter-sign: "\f081";
 
-$<%= _.slugify(name) %>Icon-facebook-sign: "\f082";
+$<%= _.camelize(name) %>Icon-facebook-sign: "\f082";
 
-$<%= _.slugify(name) %>Icon-key: "\f084";
+$<%= _.camelize(name) %>Icon-key: "\f084";
 
-$<%= _.slugify(name) %>Icon-cogs: "\f085";
+$<%= _.camelize(name) %>Icon-cogs: "\f085";
 
-$<%= _.slugify(name) %>Icon-comments: "\f086";
+$<%= _.camelize(name) %>Icon-comments: "\f086";
 
-$<%= _.slugify(name) %>Icon-thumbs-up: "\f087";
+$<%= _.camelize(name) %>Icon-thumbs-up: "\f087";
 
-$<%= _.slugify(name) %>Icon-thumbs-down: "\f088";
+$<%= _.camelize(name) %>Icon-thumbs-down: "\f088";
 
-$<%= _.slugify(name) %>Icon-heart-empty: "\f08a";
+$<%= _.camelize(name) %>Icon-heart-empty: "\f08a";
 
-$<%= _.slugify(name) %>Icon-signout: "\f08b";
+$<%= _.camelize(name) %>Icon-signout: "\f08b";
 
-$<%= _.slugify(name) %>Icon-linkedin-sign: "\f08c";
+$<%= _.camelize(name) %>Icon-linkedin-sign: "\f08c";
 
-$<%= _.slugify(name) %>Icon-pushpin: "\f08d";
+$<%= _.camelize(name) %>Icon-pushpin: "\f08d";
 
-$<%= _.slugify(name) %>Icon-external-link: "\f08e";
+$<%= _.camelize(name) %>Icon-external-link: "\f08e";
 
-$<%= _.slugify(name) %>Icon-signin: "\f090";
+$<%= _.camelize(name) %>Icon-signin: "\f090";
 
-$<%= _.slugify(name) %>Icon-trophy: "\f091";
+$<%= _.camelize(name) %>Icon-trophy: "\f091";
 
-$<%= _.slugify(name) %>Icon-github-sign: "\f092";
+$<%= _.camelize(name) %>Icon-github-sign: "\f092";
 
-$<%= _.slugify(name) %>Icon-upload-alt: "\f093";
+$<%= _.camelize(name) %>Icon-upload-alt: "\f093";
 
-$<%= _.slugify(name) %>Icon-lemon: "\f094";
+$<%= _.camelize(name) %>Icon-lemon: "\f094";
 
-$<%= _.slugify(name) %>Icon-phone: "\f095";
+$<%= _.camelize(name) %>Icon-phone: "\f095";
 
-$<%= _.slugify(name) %>Icon-bookmark-empty: "\f097";
+$<%= _.camelize(name) %>Icon-bookmark-empty: "\f097";
 
-$<%= _.slugify(name) %>Icon-phone-sign: "\f098";
+$<%= _.camelize(name) %>Icon-phone-sign: "\f098";
 
-$<%= _.slugify(name) %>Icon-twitter: "\f099";
+$<%= _.camelize(name) %>Icon-twitter: "\f099";
 
-$<%= _.slugify(name) %>Icon-facebook: "\f09a";
+$<%= _.camelize(name) %>Icon-facebook: "\f09a";
 
-$<%= _.slugify(name) %>Icon-github: "\f09b";
+$<%= _.camelize(name) %>Icon-github: "\f09b";
 
-$<%= _.slugify(name) %>Icon-unlock: "\f09c";
+$<%= _.camelize(name) %>Icon-unlock: "\f09c";
 
-$<%= _.slugify(name) %>Icon-credit: "\f09d";
+$<%= _.camelize(name) %>Icon-credit: "\f09d";
 
-$<%= _.slugify(name) %>Icon-rss: "\f09e";
+$<%= _.camelize(name) %>Icon-rss: "\f09e";
 
-$<%= _.slugify(name) %>Icon-hdd: "\f0a0";
+$<%= _.camelize(name) %>Icon-hdd: "\f0a0";
 
-$<%= _.slugify(name) %>Icon-bullhorn: "\f0a1";
+$<%= _.camelize(name) %>Icon-bullhorn: "\f0a1";
 
-$<%= _.slugify(name) %>Icon-bell: "\f0a2";
+$<%= _.camelize(name) %>Icon-bell: "\f0a2";
 
-$<%= _.slugify(name) %>Icon-certificate: "\f0a3";
+$<%= _.camelize(name) %>Icon-certificate: "\f0a3";
 
-$<%= _.slugify(name) %>Icon-hand-right: "\f0a4";
+$<%= _.camelize(name) %>Icon-hand-right: "\f0a4";
 
-$<%= _.slugify(name) %>Icon-hand-left: "\f0a5";
+$<%= _.camelize(name) %>Icon-hand-left: "\f0a5";
 
-$<%= _.slugify(name) %>Icon-hand-up: "\f0a6";
+$<%= _.camelize(name) %>Icon-hand-up: "\f0a6";
 
-$<%= _.slugify(name) %>Icon-hand-down: "\f0a7";
+$<%= _.camelize(name) %>Icon-hand-down: "\f0a7";
 
-$<%= _.slugify(name) %>Icon-circle-arrow-left: "\f0a8";
+$<%= _.camelize(name) %>Icon-circle-arrow-left: "\f0a8";
 
-$<%= _.slugify(name) %>Icon-circle-arrow-right: "\f0a9";
+$<%= _.camelize(name) %>Icon-circle-arrow-right: "\f0a9";
 
-$<%= _.slugify(name) %>Icon-circle-arrow-up: "\f0aa";
+$<%= _.camelize(name) %>Icon-circle-arrow-up: "\f0aa";
 
-$<%= _.slugify(name) %>Icon-circle-arrow-down: "\f0ab";
+$<%= _.camelize(name) %>Icon-circle-arrow-down: "\f0ab";
 
-$<%= _.slugify(name) %>Icon-globe: "\f0ac";
+$<%= _.camelize(name) %>Icon-globe: "\f0ac";
 
-$<%= _.slugify(name) %>Icon-wrench: "\f0ad";
+$<%= _.camelize(name) %>Icon-wrench: "\f0ad";
 
-$<%= _.slugify(name) %>Icon-tasks: "\f0ae";
+$<%= _.camelize(name) %>Icon-tasks: "\f0ae";
 
-$<%= _.slugify(name) %>Icon-filter: "\f0b0";
+$<%= _.camelize(name) %>Icon-filter: "\f0b0";
 
-$<%= _.slugify(name) %>Icon-briefcase: "\f0b1";
+$<%= _.camelize(name) %>Icon-briefcase: "\f0b1";
 
-$<%= _.slugify(name) %>Icon-fullscreen: "\f0b2";
+$<%= _.camelize(name) %>Icon-fullscreen: "\f0b2";
 
-$<%= _.slugify(name) %>Icon-group: "\f0c0";
+$<%= _.camelize(name) %>Icon-group: "\f0c0";
 
-$<%= _.slugify(name) %>Icon-link: "\f0c1";
+$<%= _.camelize(name) %>Icon-link: "\f0c1";
 
-$<%= _.slugify(name) %>Icon-cloud: "\f0c2";
+$<%= _.camelize(name) %>Icon-cloud: "\f0c2";
 
-$<%= _.slugify(name) %>Icon-beaker: "\f0c3";
+$<%= _.camelize(name) %>Icon-beaker: "\f0c3";
 
-$<%= _.slugify(name) %>Icon-cut: "\f0c4";
+$<%= _.camelize(name) %>Icon-cut: "\f0c4";
 
-$<%= _.slugify(name) %>Icon-copy: "\f0c5";
+$<%= _.camelize(name) %>Icon-copy: "\f0c5";
 
-$<%= _.slugify(name) %>Icon-paper-clip: "\f0c6";
+$<%= _.camelize(name) %>Icon-paper-clip: "\f0c6";
 
-$<%= _.slugify(name) %>Icon-save: "\f0c7";
+$<%= _.camelize(name) %>Icon-save: "\f0c7";
 
-$<%= _.slugify(name) %>Icon-sign-blank: "\f0c8";
+$<%= _.camelize(name) %>Icon-sign-blank: "\f0c8";
 
-$<%= _.slugify(name) %>Icon-reorder: "\f0c9";
+$<%= _.camelize(name) %>Icon-reorder: "\f0c9";
 
-$<%= _.slugify(name) %>Icon-list-ul: "\f0ca";
+$<%= _.camelize(name) %>Icon-list-ul: "\f0ca";
 
-$<%= _.slugify(name) %>Icon-list-ol: "\f0cb";
+$<%= _.camelize(name) %>Icon-list-ol: "\f0cb";
 
-$<%= _.slugify(name) %>Icon-strikethrough: "\f0cc";
+$<%= _.camelize(name) %>Icon-strikethrough: "\f0cc";
 
-$<%= _.slugify(name) %>Icon-underline: "\f0cd";
+$<%= _.camelize(name) %>Icon-underline: "\f0cd";
 
-$<%= _.slugify(name) %>Icon-table: "\f0ce";
+$<%= _.camelize(name) %>Icon-table: "\f0ce";
 
-$<%= _.slugify(name) %>Icon-magic: "\f0d0";
+$<%= _.camelize(name) %>Icon-magic: "\f0d0";
 
-$<%= _.slugify(name) %>Icon-truck: "\f0d1";
+$<%= _.camelize(name) %>Icon-truck: "\f0d1";
 
-$<%= _.slugify(name) %>Icon-pinterest: "\f0d2";
+$<%= _.camelize(name) %>Icon-pinterest: "\f0d2";
 
-$<%= _.slugify(name) %>Icon-google-plus-sign: "\f0d4";
+$<%= _.camelize(name) %>Icon-google-plus-sign: "\f0d4";
 
-$<%= _.slugify(name) %>Icon-google-plus: "\f0d5";
+$<%= _.camelize(name) %>Icon-google-plus: "\f0d5";
 
-$<%= _.slugify(name) %>Icon-money: "\f0d6";
+$<%= _.camelize(name) %>Icon-money: "\f0d6";
 
-$<%= _.slugify(name) %>Icon-caret-down: "\f0d7";
+$<%= _.camelize(name) %>Icon-caret-down: "\f0d7";
 
-$<%= _.slugify(name) %>Icon-caret-up: "\f0d8";
+$<%= _.camelize(name) %>Icon-caret-up: "\f0d8";
 
-$<%= _.slugify(name) %>Icon-caret-left: "\f0d9";
+$<%= _.camelize(name) %>Icon-caret-left: "\f0d9";
 
-$<%= _.slugify(name) %>Icon-caret-right: "\f0da";
+$<%= _.camelize(name) %>Icon-caret-right: "\f0da";
 
-$<%= _.slugify(name) %>Icon-columns: "\f0db";
+$<%= _.camelize(name) %>Icon-columns: "\f0db";
 
-$<%= _.slugify(name) %>Icon-sort: "\f0dc";
+$<%= _.camelize(name) %>Icon-sort: "\f0dc";
 
-$<%= _.slugify(name) %>Icon-sort-down: "\f0dd";
+$<%= _.camelize(name) %>Icon-sort-down: "\f0dd";
 
-$<%= _.slugify(name) %>Icon-sort-up: "\f0de";
+$<%= _.camelize(name) %>Icon-sort-up: "\f0de";
 
-$<%= _.slugify(name) %>Icon-envelope-alt: "\f0e0";
+$<%= _.camelize(name) %>Icon-envelope-alt: "\f0e0";
 
-$<%= _.slugify(name) %>Icon-linkedin: "\f0e1";
+$<%= _.camelize(name) %>Icon-linkedin: "\f0e1";
 
-$<%= _.slugify(name) %>Icon-undo: "\f0e2";
+$<%= _.camelize(name) %>Icon-undo: "\f0e2";
 
-$<%= _.slugify(name) %>Icon-legal: "\f0e3";
+$<%= _.camelize(name) %>Icon-legal: "\f0e3";
 
-$<%= _.slugify(name) %>Icon-dashboard: "\f0e4";
+$<%= _.camelize(name) %>Icon-dashboard: "\f0e4";
 
-$<%= _.slugify(name) %>Icon-comment-alt: "\f0e5";
+$<%= _.camelize(name) %>Icon-comment-alt: "\f0e5";
 
-$<%= _.slugify(name) %>Icon-comments-alt: "\f0e6";
+$<%= _.camelize(name) %>Icon-comments-alt: "\f0e6";
 
-$<%= _.slugify(name) %>Icon-bolt: "\f0e7";
+$<%= _.camelize(name) %>Icon-bolt: "\f0e7";
 
-$<%= _.slugify(name) %>Icon-sitemap: "\f0e8";
+$<%= _.camelize(name) %>Icon-sitemap: "\f0e8";
 
-$<%= _.slugify(name) %>Icon-umbrella: "\f0e9";
+$<%= _.camelize(name) %>Icon-umbrella: "\f0e9";
 
-$<%= _.slugify(name) %>Icon-paste: "\f0ea";
+$<%= _.camelize(name) %>Icon-paste: "\f0ea";
 
-$<%= _.slugify(name) %>Icon-stethoscope: "\f0eb";
+$<%= _.camelize(name) %>Icon-stethoscope: "\f0eb";
 
-$<%= _.slugify(name) %>Icon-suitcase: "\f0ec";
+$<%= _.camelize(name) %>Icon-suitcase: "\f0ec";
 
-$<%= _.slugify(name) %>Icon-bell-alt: "\f0ed";
+$<%= _.camelize(name) %>Icon-bell-alt: "\f0ed";
 
-$<%= _.slugify(name) %>Icon-coffee: "\f0ee";
+$<%= _.camelize(name) %>Icon-coffee: "\f0ee";
 
-$<%= _.slugify(name) %>Icon-food: "\f0f0";
+$<%= _.camelize(name) %>Icon-food: "\f0f0";
 
-$<%= _.slugify(name) %>Icon-file-alt: "\f0f1";
+$<%= _.camelize(name) %>Icon-file-alt: "\f0f1";
 
-$<%= _.slugify(name) %>Icon-building: "\f0f2";
+$<%= _.camelize(name) %>Icon-building: "\f0f2";
 
-$<%= _.slugify(name) %>Icon-hospital: "\f0f3";
+$<%= _.camelize(name) %>Icon-hospital: "\f0f3";
 
-$<%= _.slugify(name) %>Icon-ambulance: "\f0f4";
+$<%= _.camelize(name) %>Icon-ambulance: "\f0f4";
 
-$<%= _.slugify(name) %>Icon-medkit: "\f0f5";
+$<%= _.camelize(name) %>Icon-medkit: "\f0f5";
 
-$<%= _.slugify(name) %>Icon-angle-up: "\f0f6";
+$<%= _.camelize(name) %>Icon-angle-up: "\f0f6";
 
-$<%= _.slugify(name) %>Icon-angle-down: "\f0f7";
+$<%= _.camelize(name) %>Icon-angle-down: "\f0f7";
 
-$<%= _.slugify(name) %>Icon-desktop: "\f0f8";
+$<%= _.camelize(name) %>Icon-desktop: "\f0f8";
 
-$<%= _.slugify(name) %>Icon-laptop: "\f0f9";
+$<%= _.camelize(name) %>Icon-laptop: "\f0f9";
 
-$<%= _.slugify(name) %>Icon-tablet: "\f0fa";
+$<%= _.camelize(name) %>Icon-tablet: "\f0fa";
 
-$<%= _.slugify(name) %>Icon-mobile: "\f0fb";
+$<%= _.camelize(name) %>Icon-mobile: "\f0fb";
 
-$<%= _.slugify(name) %>Icon-circle-blank: "\f0fc";
+$<%= _.camelize(name) %>Icon-circle-blank: "\f0fc";
 
-$<%= _.slugify(name) %>Icon-quote-left: "\f0fd";
+$<%= _.camelize(name) %>Icon-quote-left: "\f0fd";
 
-$<%= _.slugify(name) %>Icon-quote-right: "\f0fe";
+$<%= _.camelize(name) %>Icon-quote-right: "\f0fe";
 
-$<%= _.slugify(name) %>Icon-paperclip: "\f104";
+$<%= _.camelize(name) %>Icon-paperclip: "\f104";
 
-$<%= _.slugify(name) %>Icon-reply-all: "\f107";
+$<%= _.camelize(name) %>Icon-reply-all: "\f107";
 
-$<%= _.slugify(name) %>Icon-forward-2: "\f108";
+$<%= _.camelize(name) %>Icon-forward-2: "\f108";
 
-$<%= _.slugify(name) %>Icon-user-2: "\f109";
+$<%= _.camelize(name) %>Icon-user-2: "\f109";
 
-$<%= _.slugify(name) %>Icon-users: "\f10a";
+$<%= _.camelize(name) %>Icon-users: "\f10a";
 
-$<%= _.slugify(name) %>Icon-heart-2: "\f10b";
+$<%= _.camelize(name) %>Icon-heart-2: "\f10b";
 
-$<%= _.slugify(name) %>Icon-heart-3: "\f10c";
+$<%= _.camelize(name) %>Icon-heart-3: "\f10c";
 
-$<%= _.slugify(name) %>Icon-thumbs-up-2: "\f110";
+$<%= _.camelize(name) %>Icon-thumbs-up-2: "\f110";
 
-$<%= _.slugify(name) %>Icon-thumbs-down-2: "\f111";
+$<%= _.camelize(name) %>Icon-thumbs-down-2: "\f111";
 
-$<%= _.slugify(name) %>Icon-chat: "\f112";
+$<%= _.camelize(name) %>Icon-chat: "\f112";
 
-$<%= _.slugify(name) %>Icon-comment-2: "\f113";
+$<%= _.camelize(name) %>Icon-comment-2: "\f113";
 
-$<%= _.slugify(name) %>Icon-skypeonline: "\f39e";
+$<%= _.camelize(name) %>Icon-skypeonline: "\f39e";
 
-$<%= _.slugify(name) %>Icon-error: "\e002";
+$<%= _.camelize(name) %>Icon-error: "\e002";
 
-$<%= _.slugify(name) %>Icon-drawer: "\e003";
+$<%= _.camelize(name) %>Icon-drawer: "\e003";
 
-$<%= _.slugify(name) %>Icon-drawer-2: "\e004";
+$<%= _.camelize(name) %>Icon-drawer-2: "\e004";
 
-$<%= _.slugify(name) %>Icon-drawer-3: "\e005";
+$<%= _.camelize(name) %>Icon-drawer-3: "\e005";
 
-$<%= _.slugify(name) %>Icon-volume-high: "\e006";
+$<%= _.camelize(name) %>Icon-volume-high: "\e006";
 
-$<%= _.slugify(name) %>Icon-images: "\e008";
+$<%= _.camelize(name) %>Icon-images: "\e008";
 
-$<%= _.slugify(name) %>Icon-image: "\e009";
+$<%= _.camelize(name) %>Icon-image: "\e009";
 
-$<%= _.slugify(name) %>Icon-pencil-2: "\e00a";
+$<%= _.camelize(name) %>Icon-pencil-2: "\e00a";
 
-$<%= _.slugify(name) %>Icon-cart: "\e00e";
+$<%= _.camelize(name) %>Icon-cart: "\e00e";
 
-$<%= _.slugify(name) %>Icon-coin: "\e00c";
+$<%= _.camelize(name) %>Icon-coin: "\e00c";
 
-$<%= _.slugify(name) %>Icon-credit-2: "\e00d";
+$<%= _.camelize(name) %>Icon-credit-2: "\e00d";
 
-$<%= _.slugify(name) %>Icon-phone-2: "\e00f";
+$<%= _.camelize(name) %>Icon-phone-2: "\e00f";
 
-$<%= _.slugify(name) %>Icon-menu: "\e011";
+$<%= _.camelize(name) %>Icon-menu: "\e011";
 
-$<%= _.slugify(name) %>Icon-earth: "\e012";
+$<%= _.camelize(name) %>Icon-earth: "\e012";
 
-$<%= _.slugify(name) %>Icon-briefcase-2: "\e013";
+$<%= _.camelize(name) %>Icon-briefcase-2: "\e013";
 
-$<%= _.slugify(name) %>Icon-airplane: "\e014";
+$<%= _.camelize(name) %>Icon-airplane: "\e014";
 
-$<%= _.slugify(name) %>Icon-truck-2: "\e015";
+$<%= _.camelize(name) %>Icon-truck-2: "\e015";
 
-$<%= _.slugify(name) %>Icon-road-2: "\e016";
+$<%= _.camelize(name) %>Icon-road-2: "\e016";
 
-$<%= _.slugify(name) %>Icon-happy: "\e018";
+$<%= _.camelize(name) %>Icon-happy: "\e018";
 
-$<%= _.slugify(name) %>Icon-sad: "\e01b";
+$<%= _.camelize(name) %>Icon-sad: "\e01b";
 
-$<%= _.slugify(name) %>Icon-checkmark: "\e019";
+$<%= _.camelize(name) %>Icon-checkmark: "\e019";
 
-$<%= _.slugify(name) %>Icon-checkmark-circle: "\e01c";
+$<%= _.camelize(name) %>Icon-checkmark-circle: "\e01c";
 
-$<%= _.slugify(name) %>Icon-file-pdf: "\e020";
+$<%= _.camelize(name) %>Icon-file-pdf: "\e020";
 
-$<%= _.slugify(name) %>Icon-file-openoffice: "\e021";
+$<%= _.camelize(name) %>Icon-file-openoffice: "\e021";
 
-$<%= _.slugify(name) %>Icon-file-word: "\e022";
+$<%= _.camelize(name) %>Icon-file-word: "\e022";
 
-$<%= _.slugify(name) %>Icon-file-excel: "\e023";
+$<%= _.camelize(name) %>Icon-file-excel: "\e023";
 
-$<%= _.slugify(name) %>Icon-file-zip: "\e024";
+$<%= _.camelize(name) %>Icon-file-zip: "\e024";
 
-$<%= _.slugify(name) %>Icon-file-css: "\e025";
+$<%= _.camelize(name) %>Icon-file-css: "\e025";
 
-$<%= _.slugify(name) %>Icon-file-powerpoint: "\e026";
+$<%= _.camelize(name) %>Icon-file-powerpoint: "\e026";
 
-$<%= _.slugify(name) %>Icon-twitter-2: "\e027";
+$<%= _.camelize(name) %>Icon-twitter-2: "\e027";
 
-$<%= _.slugify(name) %>Icon-google-plus-2: "\e02a";
+$<%= _.camelize(name) %>Icon-google-plus-2: "\e02a";
 
-$<%= _.slugify(name) %>Icon-facebook-2: "\e028";
+$<%= _.camelize(name) %>Icon-facebook-2: "\e028";
 
-$<%= _.slugify(name) %>Icon-flickr: "\e029";
+$<%= _.camelize(name) %>Icon-flickr: "\e029";
 
-$<%= _.slugify(name) %>Icon-flickr-2: "\e02b";
+$<%= _.camelize(name) %>Icon-flickr-2: "\e02b";
 
-$<%= _.slugify(name) %>Icon-vimeo: "\e02c";
+$<%= _.camelize(name) %>Icon-vimeo: "\e02c";
 
-$<%= _.slugify(name) %>Icon-soundcloud: "\e02f";
+$<%= _.camelize(name) %>Icon-soundcloud: "\e02f";
 
-$<%= _.slugify(name) %>Icon-skype: "\e030";
+$<%= _.camelize(name) %>Icon-skype: "\e030";
 
-$<%= _.slugify(name) %>Icon-apple: "\e031";
+$<%= _.camelize(name) %>Icon-apple: "\e031";
 
-$<%= _.slugify(name) %>Icon-windows8: "\e032";
+$<%= _.camelize(name) %>Icon-windows8: "\e032";
 
-$<%= _.slugify(name) %>Icon-chrome: "\e033";
+$<%= _.camelize(name) %>Icon-chrome: "\e033";
 
-$<%= _.slugify(name) %>Icon-firefox: "\e034";
+$<%= _.camelize(name) %>Icon-firefox: "\e034";
 
-$<%= _.slugify(name) %>Icon-IE: "\e035";
+$<%= _.camelize(name) %>Icon-IE: "\e035";
 
-$<%= _.slugify(name) %>Icon-opera: "\e036";
+$<%= _.camelize(name) %>Icon-opera: "\e036";
 
-$<%= _.slugify(name) %>Icon-barcode: "\f02a";
+$<%= _.camelize(name) %>Icon-barcode: "\f02a";
 
-$<%= _.slugify(name) %>Icon-locked: "\e000";
+$<%= _.camelize(name) %>Icon-locked: "\e000";
 
-$<%= _.slugify(name) %>Icon-redo: "\e001";
+$<%= _.camelize(name) %>Icon-redo: "\e001";
 
-$<%= _.slugify(name) %>Icon-reply: "\f106";
+$<%= _.camelize(name) %>Icon-reply: "\f106";
 
-$<%= _.slugify(name) %>Icon-file-add: "\e037";
+$<%= _.camelize(name) %>Icon-file-add: "\e037";
 
-$<%= _.slugify(name) %>Icon-folder-open: "\f07c";
+$<%= _.camelize(name) %>Icon-folder-open: "\f07c";
 
-$<%= _.slugify(name) %>Icon-cord: "\e00b";
+$<%= _.camelize(name) %>Icon-cord: "\e00b";
 
-$<%= _.slugify(name) %>Icon-cube: "\e038";
+$<%= _.camelize(name) %>Icon-cube: "\e038";
 
-$<%= _.slugify(name) %>Icon-puzzle: "\e039";
+$<%= _.camelize(name) %>Icon-puzzle: "\e039";
 
-$<%= _.slugify(name) %>Icon-tools: "\e03a";
+$<%= _.camelize(name) %>Icon-tools: "\e03a";
 
-$<%= _.slugify(name) %>Icon-equalizer: "\e03b";
+$<%= _.camelize(name) %>Icon-equalizer: "\e03b";
 
-$<%= _.slugify(name) %>Icon-brush: "\e03c";
+$<%= _.camelize(name) %>Icon-brush: "\e03c";
 
-$<%= _.slugify(name) %>Icon-checkbox-partial: "\e03d";
+$<%= _.camelize(name) %>Icon-checkbox-partial: "\e03d";
 
-$<%= _.slugify(name) %>Icon-calendar: "\f073";
+$<%= _.camelize(name) %>Icon-calendar: "\f073";
 
-$<%= _.slugify(name) %>Icon-calendar-2: "\e03e";
+$<%= _.camelize(name) %>Icon-calendar-2: "\e03e";
 
-$<%= _.slugify(name) %>Icon-lifebuoy: "\e03f";
+$<%= _.camelize(name) %>Icon-lifebuoy: "\e03f";
 
-$<%= _.slugify(name) %>Icon-exclamation-sign: "\f06a";
+$<%= _.camelize(name) %>Icon-exclamation-sign: "\f06a";
 
-$<%= _.slugify(name) %>Icon-box-add: "\e010";
+$<%= _.camelize(name) %>Icon-box-add: "\e010";
 
-$<%= _.slugify(name) %>Icon-box-remove: "\e017";
+$<%= _.camelize(name) %>Icon-box-remove: "\e017";
 
-$<%= _.slugify(name) %>Icon-facetime-video: "\f03d";
+$<%= _.camelize(name) %>Icon-facetime-video: "\f03d";
 
-$<%= _.slugify(name) %>Icon-play-2: "\e007";
+$<%= _.camelize(name) %>Icon-play-2: "\e007";
 
-$<%= _.slugify(name) %>Icon-play-3: "\e01a";
+$<%= _.camelize(name) %>Icon-play-3: "\e01a";
 
-$<%= _.slugify(name) %>Icon-database: "\e01d";
+$<%= _.camelize(name) %>Icon-database: "\e01d";
 
-$<%= _.slugify(name) %>Icon-aid: "\e01e";
+$<%= _.camelize(name) %>Icon-aid: "\e01e";
 
-$<%= _.slugify(name) %>Icon-vcard: "\e01f";
+$<%= _.camelize(name) %>Icon-vcard: "\e01f";
 
-$<%= _.slugify(name) %>Icon-compass: "\e040";
+$<%= _.camelize(name) %>Icon-compass: "\e040";
 
-$<%= _.slugify(name) %>Icon-map: "\e041";
+$<%= _.camelize(name) %>Icon-map: "\e041";
 
-$<%= _.slugify(name) %>Icon-lightbulb: "\e02e";
+$<%= _.camelize(name) %>Icon-lightbulb: "\e02e";
 
-$<%= _.slugify(name) %>Icon-stats: "\e042";
+$<%= _.camelize(name) %>Icon-stats: "\e042";
 
-$<%= _.slugify(name) %>Icon-pie: "\e043";
+$<%= _.camelize(name) %>Icon-pie: "\e043";
 
-$<%= _.slugify(name) %>Icon-cart-2: "\e044";
+$<%= _.camelize(name) %>Icon-cart-2: "\e044";
 
-$<%= _.slugify(name) %>Icon-share-2: "\e045";
+$<%= _.camelize(name) %>Icon-share-2: "\e045";
 
-$<%= _.slugify(name) %>Icon-html5: "\e046";
+$<%= _.camelize(name) %>Icon-html5: "\e046";
 
-$<%= _.slugify(name) %>Icon-github-2: "\e047";
+$<%= _.camelize(name) %>Icon-github-2: "\e047";
 
-$<%= _.slugify(name) %>Icon-youtube: "\e02d";
+$<%= _.camelize(name) %>Icon-youtube: "\e02d";
 
-$<%= _.slugify(name) %>Icon-file-xml: "\e048";
+$<%= _.camelize(name) %>Icon-file-xml: "\e048";
 
-$<%= _.slugify(name) %>Icon-alert: "\e049";
+$<%= _.camelize(name) %>Icon-alert: "\e049";

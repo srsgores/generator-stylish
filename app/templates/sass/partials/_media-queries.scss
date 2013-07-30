@@ -74,23 +74,23 @@
 Mobile main media query
 ========================================================================== */
 
-@include breakpoint($<%= _.slugify(name) %>BreakpointMain) {
+@include breakpoint($<%= _.camelize(name) %>BreakpointMain) {
 	/* Ensure no increased font sizes */
 	body {
-		font-size: $<%= _.slugify(name) %>BaseFontSize;
+		font-size: $<%= _.camelize(name) %>BaseFontSize;
 		-webkit-text-size-adjust: none;
 	}
 	/* Responsive grids */
-	.#{$<%= _.slugify(name) %>RowNotation}, body, .container, .button, button, .btn, input[type="submit"], a.submit, textarea, input, img, .actions, .form-actions, .btn-group, .toolbar, .nav ul li {
+	.#{$<%= _.camelize(name) %>RowNotation}, body, .container, .button, button, .btn, input[type="submit"], a.submit, textarea, input, img, .actions, .form-actions, .btn-group, .toolbar, .nav ul li {
 		width: 100%;
 		min-width: 0;
 		margin-left: 0;
 		margin-right: 0;
 	}
 	.container {
-		padding: 0 $<%= _.slugify(name) %>Padding; //allow padding to the side of the container
-		@for $i from 1 through $<%= _.slugify(name) %>Num-cols {
-			.#{$<%= _.slugify(name) %>RowNotation} {
+		padding: 0 $<%= _.camelize(name) %>Padding; //allow padding to the side of the container
+		@for $i from 1 through $<%= _.camelize(name) %>Num-cols {
+			.#{$<%= _.camelize(name) %>RowNotation} {
 				.#{col-name($i)}, .#{col-name($i)}:last-child {
 					width: auto;
 					float: none;
@@ -108,7 +108,7 @@ Mobile main media query
 		text-align: center;
 	}
 	textarea, input {
-		padding: $<%= _.slugify(name) %>PaddingSmall $<%= _.slugify(name) %>Padding;
+		padding: $<%= _.camelize(name) %>PaddingSmall $<%= _.camelize(name) %>Padding;
 	}
 	.hidden-phone {
 		display: none;
@@ -120,14 +120,14 @@ Mobile main media query
 	.actions, .form-actions, .btn-group, .toolbar {
 		.button, button, .btn, input[type="submit"], a.submit {
 			&:first-child {
-				@include border-top-radius($<%= _.slugify(name) %>BorderRadiusLarge);
+				@include border-top-radius($<%= _.camelize(name) %>BorderRadiusLarge);
 				@include border-bottom-radius(0);
 			}
 			&:last-child {
 				@include border-top-radius(0);
-				@include border-bottom-radius($<%= _.slugify(name) %>BorderRadiusLarge);
+				@include border-bottom-radius($<%= _.camelize(name) %>BorderRadiusLarge);
 			}
-			margin: -#{$<%= _.slugify(name) %>MarginMini} 0 0 0; //buttons don't show double borders
+			margin: -#{$<%= _.camelize(name) %>MarginMini} 0 0 0; //buttons don't show double borders
 		}
 	}
 
@@ -138,7 +138,7 @@ Mobile main media query
 				display: block;
 				border-right: none;
 				border-left: none;
-				border-bottom: $<%= _.slugify(name) %>BorderWidth $<%= _.slugify(name) %>BorderStyle darken($secondaryColour, 25);
+				border-bottom: $<%= _.camelize(name) %>BorderWidth $<%= _.camelize(name) %>BorderStyle darken($secondaryColour, 25);
 			}
 			&:last-child a {
 				border-bottom: none;
@@ -146,7 +146,7 @@ Mobile main media query
 			ul, ul ul {
 				@include opacity(1);
 				visibility: visible;
-				font-size: $<%= _.slugify(name) %>FontSizeSmall;
+				font-size: $<%= _.camelize(name) %>FontSizeSmall;
 				display: block;
 				position: static;
 				margin: 0;
@@ -162,6 +162,6 @@ Mobile main media query
 
 	//forms at full screen width
 	input:not([type]), input[type="color"], input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"] {
-		width: $<%= _.slugify(name) %>RowWidth;
+		width: $<%= _.camelize(name) %>RowWidth;
 	}
 }
