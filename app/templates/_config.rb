@@ -1,7 +1,7 @@
 # Require any additional compass plugins here.
 require "susy"
 require "breakpoint"
-<% if (includeReset) {%>require "companimation"<% } %>
+<% if (includeAnimations) {%>require "companimation"<% } %>
 
 
 # Set this to the root of your project when deployed:

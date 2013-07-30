@@ -35,6 +35,7 @@ Imports
 <% if (includeTypeHelpers) {%>@import "partials/_type.scss";<% } %>
 <% if (includeFormHelpers) {%>@import "partials/_forms.scss";<% } %>
 <% if (includeIcomoon) {%>@import "partials/_nav.scss";<% } %>
+<% if (includeBasicStyles) {%>@import "partials/_base.scss";<% } %>
 @import "partials/_media-queries";
 
 /* =============================================================================

@@ -69,6 +69,13 @@ StylishGenerator.prototype.askFor = function askFor()
 
 		//SASS stuff
 		{
+			name: "includeBaseStyles",
+			type: "confirm",
+			default: false,
+			message: "Would you like to include basic styles?"
+		},
+
+		{
 			name: "includeIcomoon",
 			type: "confirm",
 			default: true,
@@ -84,19 +91,19 @@ StylishGenerator.prototype.askFor = function askFor()
 		{
 			name: "includeBasicNav",
 			type: "confirm",
-			default: "false",
+			default: false,
 			message: "Would you like to include nav styles?"
 		},
 		{
 			name: "includeReset",
 			type: "confirm",
-			default: "false",
+			default: false,
 			message: "Would you like to include a custom reset?"
 		},
 		{
 			name: "includeTypeHelpers",
 			type: "confirm",
-			default: "false",
+			default: false,
 			message: "Would you like to include a type stylesheet?"
 		},
 		{
@@ -120,6 +127,7 @@ StylishGenerator.prototype.askFor = function askFor()
 		this.authorGitHub = props.authorGitHub;
 		this.authorTwitter = props.authorTwitter;
 		this.authorCompanyName = props.authorCompanyName;
+		this.includeBasicStyles = props.includeBasicStyles;
 		this.includeBasicNav = props.includeBasicNav;
 		this.includeReset = props.includeReset;
 		this.includeTypeHelpers = props.includeTypeHelpers;
@@ -164,6 +172,11 @@ StylishGenerator.prototype.app = function app()
 	if (this.includeBasicNav) {
 		this.template("sass/partials/_nav.scss", "sass/partials/_nav.scss");
 	}
+
+	if (this.includeBasicStyles) {
+		this.template("sass/partials/_base.scss", "sass/partials/_base.scss");
+	}
+
 	this.template("sass/partials/_variables.scss", "sass/partials/_variables.scss");
 
 	//bower dependency
