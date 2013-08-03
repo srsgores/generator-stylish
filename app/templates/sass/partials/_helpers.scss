@@ -97,7 +97,7 @@ Visibility Helpers
 /* =============================================================================
 CSS3 PIE
 ========================================================================== */
-@if $<%= _.camelize(name) %>Pie-enabled == true {
+@if $pie-enabled == true {
 	.pie-element {
 		// relative is the default, so passing relative
 		// is redundant, but we do it here for clarity%
@@ -363,7 +363,7 @@ Border radius
 
 //CSS PIE for all rounded corners
 %rounded, %rounded-left, %rounded-right, %rounded-top, %rounded-bottom, %rounded-large, %rounded-left-large, %rounded-right-large, %rounded-bottom-large, %rounded-top-large {
-	@if ($<%= _.camelize(name) %>Pie-enabled == true) {
+	@if ($pie-enabled == true) {
 		@extend .pie;
 	}
 }
@@ -454,33 +454,33 @@ Border radius
 
 %border-box {
 	@include box-sizing(border-box);
-	@if ($<%= _.camelize(name) %>Pie-enabled == true) {
+	@if ($pie-enabled == true) {
 		*behavior: url(/css/boxsizing.htc); //allow correct box-sizing on IE 6, 7 (will not work on localhost)
 	//also, make sure to add `AddType text/x-component .htc` to apache.config file
 	}
 }
 
 %transition-all {
-	@include transition($transitionTime all $transitionFunction);
+	@include transition($<%= _.camelize(name) %>TransitionTime all $<%= _.camelize(name) %>TransitionFunction);
 }
 
 /* =============================================================================
 Font Sizes
 ========================================================================== */
 %large {
-	font-size: $fontSizeLarge;
+	font-size: $<%= _.camelize(name) %>FontSizeLarge;
 }
 
 %medium {
-	font-size: $fontSizeMedium;
+	font-size: $<%= _.camelize(name) %>FontSizeMedium;
 }
 
 %small {
-	font-size: $fontSizeSmall;
+	font-size: $<%= _.camelize(name) %>FontSizeSmall;
 }
 
 %mini {
-	font-size: $fontSizeMini;
+	font-size: $<%= _.camelize(name) %>FontSizeMini;
 }
 
 /* =============================================================================
