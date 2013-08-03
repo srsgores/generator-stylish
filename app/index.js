@@ -182,6 +182,7 @@ StylishGenerator.prototype.app = function app()
 	}
 
 	this.template("sass/partials/_variables.scss", "sass/partials/_variables.scss");
+	this.template("sass/partials/_mixins.scss", "sass/partials/_mixins.scss");
 
 	//bower dependency
 	this.template("_config.rb", "config.rb");

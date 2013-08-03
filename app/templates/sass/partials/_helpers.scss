@@ -1,3 +1,19 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @package: <%= name %> (Custom Stylish Theme) -- read more at http://userstyles.org/
+
+ @author: <%= authorName %>
+ @www: <%= authorURL %>
+ @github: <%= authorGitHub %>
+
+ @twitter: <%= authorTwitter %>
+
+ @copyright: COPYRIGHT <%= currentDate %> <%= authorCompanyName %>
+ =============================================================================
+ Filename: _helpers.scss
+ =============================================================================
+ This file contains all useful helpers (usually used through @extends) in the <%= name %> custom stylish style.  Styles should be compiled using compass and sass (make sure SUSY is installed).
+ --------------------------------------------------------------------------------------------------------------------- */
+
 /**
  * Non-semantic helper classes: please define your styles before this section
  */
@@ -39,7 +55,7 @@ Visibility Helpers
 	position: absolute;
 	width: 1px;
 	left: -500%;
-	
+
 	&.focusable {
 		&:active, &:focus { /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
 			clip: auto;
@@ -81,7 +97,7 @@ Visibility Helpers
 /* =============================================================================
 CSS3 PIE
 ========================================================================== */
-@if $pie-enabled == true {
+@if $<%= _.camelize(name) %>Pie-enabled == true {
 	.pie-element {
 		// relative is the default, so passing relative
 		// is redundant, but we do it here for clarity%
@@ -120,7 +136,7 @@ Margins
 
 /* Normal margin */
 %normal-margin {
-	margin: $margin;
+	margin: $<%= _.camelize(name) %>Margin;
 }
 
 %margin-none {
@@ -128,28 +144,106 @@ Margins
 }
 
 %normal-margin-bottom {
-	margin-bottom: $margin;
+	margin-bottom: $<%= _.camelize(name) %>Margin;
 }
 
 %normal-margin-top {
-	margin-top: $margin;
+	margin-top: $<%= _.camelize(name) %>Margin;
 }
 
 %normal-margin-left {
-	margin-left: $margin;
+	margin-left: $<%= _.camelize(name) %>Margin;
 }
 
 %normal-margin-right {
-	margin-right: $margin;
+	margin-right: $<%= _.camelize(name) %>Margin;
 }
 
 /* Normal margin combinations */
 %normal-margin-top-bottom {
-	margin: $margin 0;
+	margin: $<%= _.camelize(name) %>Margin 0;
 }
 
 %normal-margin-left-right {
-	margin: 0 $margin;
+	margin: 0 $<%= _.camelize(name) %>Margin;
+}
+
+/* Large Margin */
+
+%large-margin {
+	margin: $<%= _.camelize(name) %>MarginLarge;
+}
+
+%large-margin-top-bottom {
+	margin: $<%= _.camelize(name) %>MarginLarge 0;
+}
+
+%large-margin-left-right {
+	margin: 0 $<%= _.camelize(name) %>MarginLarge;
+}
+
+%large-margin-bottom {
+	margin-bottom: $<%= _.camelize(name) %>MarginLarge;
+}
+
+%large-margin-right {
+	margin-right: $<%= _.camelize(name) %>MarginLarge;
+}
+
+%large-margin-left {
+	margin-left: $<%= _.camelize(name) %>MarginLarge;
+}
+
+/* Small Margin */
+
+%small-margin {
+	margin: $<%= _.camelize(name) %>MarginSmall;
+}
+
+%small-margin-top-bottom {
+	margin: $<%= _.camelize(name) %>MarginSmall 0;
+}
+
+%small-margin-left-right {
+	margin: 0 $<%= _.camelize(name) %>MarginSmall;
+}
+
+%small-margin-bottom {
+	margin-bottom: $<%= _.camelize(name) %>MarginSmall;
+}
+
+%small-margin-right {
+	margin-right: $<%= _.camelize(name) %>MarginSmall;
+}
+
+%small-margin-left {
+	margin-left: $<%= _.camelize(name) %>MarginSmall;
+}
+
+/* Mini Margin */
+
+%mini-margin {
+	margin: $<%= _.camelize(name) %>MarginMini;
+}
+
+%mini-margin-top-bottom {
+	margin: $<%= _.camelize(name) %>MarginMini 0;
+}
+
+%mini-margin-left-right {
+	margin: 0 $<%= _.camelize(name) %>MarginMini;
+}
+
+%mini-margin-bottom {
+	margin-bottom: $<%= _.camelize(name) %>MarginMini;
+}
+
+%mini-margin-right {
+	margin-right: $<%= _.camelize(name) %>MarginMini;
+}
+
+%mini-margin-left {
+	margin-left: $<%= _.camelize(name) %>MarginMini;
 }
 
 /* =============================================================================
@@ -158,7 +252,7 @@ Padding
 
 /* Normal padding */
 %normal-padding {
-	padding: $padding;
+	padding: $<%= _.camelize(name) %>Padding;
 }
 
 %padding-none {
@@ -166,101 +260,101 @@ Padding
 }
 
 %normal-padding-top-bottom {
-	padding: $padding 0;
+	padding: $<%= _.camelize(name) %>Padding 0;
 }
 
 %normal-padding-left-right {
-	padding: 0 $padding;
+	padding: 0 $<%= _.camelize(name) %>Padding;
 }
 
 %normal-padding-bottom {
-	padding-bottom: $padding;
+	padding-bottom: $<%= _.camelize(name) %>Padding;
 }
 
 %normal-padding-right {
-	padding-right: $padding;
+	padding-right: $<%= _.camelize(name) %>Padding;
 }
 
 %normal-padding-left {
-	padding-left: $padding;
+	padding-left: $<%= _.camelize(name) %>Padding;
 }
 
 /* Large Padding */
 
 %large-padding {
-	padding: $paddingLarge;
+	padding: $<%= _.camelize(name) %>PaddingLarge;
 }
 
 %large-padding-top-bottom {
-	padding: $paddingLarge 0;
+	padding: $<%= _.camelize(name) %>PaddingLarge 0;
 }
 
 %large-padding-left-right {
-	padding: 0 $paddingLarge;
+	padding: 0 $<%= _.camelize(name) %>PaddingLarge;
 }
 
 %large-padding-bottom {
-	padding-bottom: $paddingLarge;
+	padding-bottom: $<%= _.camelize(name) %>PaddingLarge;
 }
 
 %large-padding-right {
-	padding-right: $paddingLarge;
+	padding-right: $<%= _.camelize(name) %>PaddingLarge;
 }
 
 %large-padding-left {
-	padding-left: $paddingLarge;
+	padding-left: $<%= _.camelize(name) %>PaddingLarge;
 }
 
 /* Small Padding */
 
 %small-padding {
-	padding: $paddingSmall;
+	padding: $<%= _.camelize(name) %>PaddingSmall;
 }
 
 %small-padding-top-bottom {
-	padding: $paddingSmall 0;
+	padding: $<%= _.camelize(name) %>PaddingSmall 0;
 }
 
 %small-padding-left-right {
-	padding: 0 $paddingSmall;
+	padding: 0 $<%= _.camelize(name) %>PaddingSmall;
 }
 
 %small-padding-bottom {
-	padding-bottom: $paddingSmall;
+	padding-bottom: $<%= _.camelize(name) %>PaddingSmall;
 }
 
 %small-padding-right {
-	padding-right: $paddingSmall;
+	padding-right: $<%= _.camelize(name) %>PaddingSmall;
 }
 
 %small-padding-left {
-	padding-left: $paddingSmall;
+	padding-left: $<%= _.camelize(name) %>PaddingSmall;
 }
 
 /* Mini Padding */
 
 %mini-padding {
-	padding: $paddingMini;
+	padding: $<%= _.camelize(name) %>PaddingMini;
 }
 
 %mini-padding-top-bottom {
-	padding: $paddingMini 0;
+	padding: $<%= _.camelize(name) %>PaddingMini 0;
 }
 
 %mini-padding-left-right {
-	padding: 0 $paddingMini;
+	padding: 0 $<%= _.camelize(name) %>PaddingMini;
 }
 
 %mini-padding-bottom {
-	padding-bottom: $paddingMini;
+	padding-bottom: $<%= _.camelize(name) %>PaddingMini;
 }
 
 %mini-padding-right {
-	padding-right: $paddingMini;
+	padding-right: $<%= _.camelize(name) %>PaddingMini;
 }
 
 %mini-padding-left {
-	padding-left: $paddingMini;
+	padding-left: $<%= _.camelize(name) %>PaddingMini;
 }
 
 /* =============================================================================
@@ -269,7 +363,7 @@ Border radius
 
 //CSS PIE for all rounded corners
 %rounded, %rounded-left, %rounded-right, %rounded-top, %rounded-bottom, %rounded-large, %rounded-left-large, %rounded-right-large, %rounded-bottom-large, %rounded-top-large {
-	@if ($pie-enabled == true) {
+	@if ($<%= _.camelize(name) %>Pie-enabled == true) {
 		@extend .pie;
 	}
 }
@@ -277,27 +371,27 @@ Border radius
 /* Normal border radii */
 
 %rounded {
-	@include border-radius($borderRadius);
+	@include border-radius($<%= _.camelize(name) %>BorderRadius);
 }
 
 %rounded-left {
-	@include border-top-left-radius($borderRadius);
-	@include border-bottom-left-radius($borderRadius);
+	@include border-top-left-radius($<%= _.camelize(name) %>BorderRadius);
+	@include border-bottom-left-radius($<%= _.camelize(name) %>BorderRadius);
 }
 
 %rounded-right {
-	@include border-top-right-radius($borderRadius);
-	@include border-bottom-right-radius($borderRadius);
+	@include border-top-right-radius($<%= _.camelize(name) %>BorderRadius);
+	@include border-bottom-right-radius($<%= _.camelize(name) %>BorderRadius);
 }
 
 %rounded-top {
-	@include border-top-left-radius($borderRadius);
-	@include border-top-right-radius($borderRadius);
+	@include border-top-left-radius($<%= _.camelize(name) %>BorderRadius);
+	@include border-top-right-radius($<%= _.camelize(name) %>BorderRadius);
 }
 
 %rounded-bottom {
-	@include border-bottom-left-radius($borderRadius);
-	@include border-bottom-right-radius($borderRadius);
+	@include border-bottom-left-radius($<%= _.camelize(name) %>BorderRadius);
+	@include border-bottom-right-radius($<%= _.camelize(name) %>BorderRadius);
 }
 
 %rounded-left-none {
@@ -308,27 +402,27 @@ Border radius
 /* Large border radii */
 
 %rounded-large {
-	@include border-radius($borderRadiusLarge);
+	@include border-radius($<%= _.camelize(name) %>BorderRadiusLarge);
 }
 
 %rounded-left-large {
-	@include border-top-left-radius($borderRadiusLarge);
-	@include border-bottom-left-radius($borderRadiusLarge);
+	@include border-top-left-radius($<%= _.camelize(name) %>BorderRadiusLarge);
+	@include border-bottom-left-radius($<%= _.camelize(name) %>BorderRadiusLarge);
 }
 
 %rounded-right-large {
-	@include border-top-right-radius($borderRadiusLarge);
-	@include border-bottom-right-radius($borderRadiusLarge);
+	@include border-top-right-radius($<%= _.camelize(name) %>BorderRadiusLarge);
+	@include border-bottom-right-radius($<%= _.camelize(name) %>BorderRadiusLarge);
 }
 
 %rounded-top-large {
-	@include border-top-left-radius($borderRadiusLarge);
-	@include border-top-right-radius($borderRadiusLarge);
+	@include border-top-left-radius($<%= _.camelize(name) %>BorderRadiusLarge);
+	@include border-top-right-radius($<%= _.camelize(name) %>BorderRadiusLarge);
 }
 
 %rounded-bottom-large {
-	@include border-bottom-left-radius($borderRadiusLarge);
-	@include border-bottom-right-radius($borderRadiusLarge);
+	@include border-bottom-left-radius($<%= _.camelize(name) %>BorderRadiusLarge);
+	@include border-bottom-right-radius($<%= _.camelize(name) %>BorderRadiusLarge);
 }
 
 /* No rounded radii (useful for overriding other elements with radii) */
@@ -360,9 +454,9 @@ Border radius
 
 %border-box {
 	@include box-sizing(border-box);
-	@if ($pie-enabled == true) {
+	@if ($<%= _.camelize(name) %>Pie-enabled == true) {
 		*behavior: url(/css/boxsizing.htc); //allow correct box-sizing on IE 6, 7 (will not work on localhost)
-		//also, make sure to add `AddType text/x-component .htc` to apache.config file
+	//also, make sure to add `AddType text/x-component .htc` to apache.config file
 	}
 }
 
@@ -408,23 +502,23 @@ Opacity/visibility
 Borders
 ========================================================================== */
 %bordered {
-	border: $border;
+	border: $<%= _.camelize(name) %>Border;
 }
 
 %bordered-right {
-	border-right: $border;
+	border-right: $<%= _.camelize(name) %>Border;
 }
 
 %bordered-left {
-	border-left: $border;
+	border-left: $<%= _.camelize(name) %>Border;
 }
 
 %bordered-top {
-	border-top: $border;
+	border-top: $<%= _.camelize(name) %>Border;
 }
 
 %bordered-bottom {
-	border-bottom: $border;
+	border-bottom: $<%= _.camelize(name) %>Border;
 }
 
 %border-none {
@@ -489,5 +583,5 @@ Links
 Widths
 ========================================================================== */
 %row-width {
-	width: $rowWidth;
+	width: $<%= _.camelize(name) %>RowWidth;
 }

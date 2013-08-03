@@ -27,7 +27,7 @@
 .nav {
 	background: darken($<%= _.camelize(name) %>TertiaryColour, 15);
 	border-bottom: $<%= _.camelize(name) %>BorderWidth $<%= _.camelize(name) %>BorderStyle darken($<%= _.camelize(name) %>BorderColour, 15%);
-	overflow: visible;
+	@extend %overflow-visible;
 	@extend %row-width;
 
 	@include background(linear-gradient($<%= _.camelize(name) %>TertiaryColour, darken($<%= _.camelize(name) %>TertiaryColour, 30)));

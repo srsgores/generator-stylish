@@ -88,7 +88,7 @@
 		@extend %col;
 	}
 
-	.#{$<%= _.camelize(name) %>RowNotation} {
+	%#{$<%= _.camelize(name) %>RowNotation} {
 		%#{col-name($i)}:last-child {
 			@extend %last !optional;
 			@include span-columns($i omega, $<%= _.camelize(name) %>Num-cols);
@@ -108,7 +108,7 @@
 .container {
 	@include container;
 	@extend %border-box;
-	.#{$<%= _.camelize(name) %>RowNotation} {
+	%#{$<%= _.camelize(name) %>RowNotation} {
 		width: $<%= _.camelize(name) %>Container-width;
 		margin: 0 auto;
 		@extend %overflow-hidden;
@@ -119,10 +119,6 @@
 			@extend %overflow-visible;
 		}
 	}
-}
-
-@for $i from 1 through ($<%= _.camelize(name) %>Num-cols) {
-
 }
 
 %last {
